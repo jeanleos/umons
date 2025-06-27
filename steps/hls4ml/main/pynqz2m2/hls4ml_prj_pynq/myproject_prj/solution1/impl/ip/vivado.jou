@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jun 27 09:43:20 2025
+# Process ID: 266309
+# Current directory: /home/jeanleo2/hls4ml2/pynqz2m2/hls4ml_prj_pynq/myproject_prj/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/jeanleo2/hls4ml2/pynqz2m2/hls4ml_prj_pynq/myproject_prj/solution1/impl/ip/vivado.log
+# Journal file: /home/jeanleo2/hls4ml2/pynqz2m2/hls4ml_prj_pynq/myproject_prj/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

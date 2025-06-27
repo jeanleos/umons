@@ -1,0 +1,47 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'conv_2d_cl_array_ap_fixed_10u_array_ap_fixed_8_4_5_3_0_5u_config7_s'" level="0">
+<item name = "Date">Thu Jun 26 23:55:48 2025
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 5.827 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">12501, 1150001, 72.843 us, 6.701 ms, 12501, 1150001, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_compute_output_buffer_2d_array_array_ap_fixed_8_4_5_3_0_5u_config7_s_fu_329">compute_output_buffer_2d_array_array_ap_fixed_8_4_5_3_0_5u_config7_s, 2, 457, 11.654 ns, 2.663 us, 2, 457, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- ReadInputHeight_ReadInputWidth">12500, 1150000, 5 ~ 460, -, -, 2500, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
