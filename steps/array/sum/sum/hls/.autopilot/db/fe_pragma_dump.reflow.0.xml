@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="coef_add.cpp" line="7" pragmaType="interface" parentfunction="sum" mode="s_axilite" port="mat" bundle="CTRL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="coef_add.cpp" line="8" pragmaType="interface" parentfunction="sum" mode="s_axilite" port="res" bundle="CTRL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="coef_add.cpp" line="9" pragmaType="interface" parentfunction="sum" mode="s_axilite" port="" bundle="CTRL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

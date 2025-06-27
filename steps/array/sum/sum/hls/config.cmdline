@@ -1,0 +1,3 @@
+relativeroot=C:/test/sum
+original_argv=--mode hls --package --config C:\test\sum\hls_config.cfg --work_dir sum 
+

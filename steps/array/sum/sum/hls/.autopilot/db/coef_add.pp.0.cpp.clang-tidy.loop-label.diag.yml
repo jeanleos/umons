@@ -1,0 +1,22 @@
+---
+MainSourceFile:  'C:/test/sum/sum/hls/.autopilot/db/coef_add.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_1:  '
+    FileOffset:      13
+    FilePath:        coef_add.cpp
+    Replacements:    
+      - FilePath:        'C:\test\sum\sum\hls\.autopilot\db\coef_add.pp.0.cpp'
+        Offset:          9784
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_14_2:  '
+    FileOffset:      14
+    FilePath:        coef_add.cpp
+    Replacements:    
+      - FilePath:        'C:\test\sum\sum\hls\.autopilot\db\coef_add.pp.0.cpp'
+        Offset:          9820
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_14_2: '
+...

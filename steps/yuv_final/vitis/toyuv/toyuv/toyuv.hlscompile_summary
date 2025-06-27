@@ -1,0 +1,245 @@
+<ENTRY>
+{
+ "thisFile": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/toyuv.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jun 18 13:42:23 2025",
+ "timestampMillis": "1750246943012",
+ "buildStep": {
+  "cmdId": "6f430b25-cd60-4d9d-942a-eafb425a4a99",
+  "name": "v++",
+  "logFile": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/logs/toyuv.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/jeanleo2/yuv_final/vitis/toyuv/hls_config.cfg --work_dir toyuv ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/jeanleo2/yuv_final/vitis/toyuv/hls_config.cfg",
+   "--work_dir",
+   "toyuv"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/jeanleo2/yuv_final/vitis/toyuv/hls_config.cfg",
+    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.file=/home/jeanleo2/yuv_final/toyuv.cpp\nsyn.top=toyuv"
+   }
+  ],
+  "cwd": "/home/jeanleo2/yuv_final/vitis/toyuv"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jun 18 13:42:23 2025",
+ "timestampMillis": "1750246943013",
+ "status": {
+  "cmdId": "6f430b25-cd60-4d9d-942a-eafb425a4a99",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Jun 18 13:42:25 2025",
+ "timestampMillis": "1750246945857",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "toyuv",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/jeanleo2/yuv_final/toyuv.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jun 18 13:42:25 2025",
+ "timestampMillis": "1750246945857",
+ "buildStep": {
+  "cmdId": "cd5742af-59fc-4609-a0c2-a7dbcd5a372b",
+  "name": "",
+  "logFile": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/jeanleo2/yuv_final/vitis/toyuv"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jun 18 13:42:25 2025",
+ "timestampMillis": "1750246945857",
+ "status": {
+  "cmdId": "cd5742af-59fc-4609-a0c2-a7dbcd5a372b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:25 2025",
+ "timestampMillis": "1750246945858",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:25 2025",
+ "timestampMillis": "1750246945858",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:25 2025",
+ "timestampMillis": "1750246945858",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:34 2025",
+ "timestampMillis": "1750246954888",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:34 2025",
+ "timestampMillis": "1750246954888",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:34 2025",
+ "timestampMillis": "1750246954888",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jun 18 13:42:34 2025",
+ "timestampMillis": "1750246954888",
+ "status": {
+  "cmdId": "cd5742af-59fc-4609-a0c2-a7dbcd5a372b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jun 18 13:42:34 2025",
+ "timestampMillis": "1750246954992",
+ "status": {
+  "cmdId": "6f430b25-cd60-4d9d-942a-eafb425a4a99",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:35 2025",
+ "timestampMillis": "1750246955011",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/reports/v++_compile_toyuv_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 18 13:42:35 2025",
+ "timestampMillis": "1750246955011",
+ "report": {
+  "path": "/home/jeanleo2/yuv_final/vitis/toyuv/toyuv/reports/.db/v++_compile_toyuv_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

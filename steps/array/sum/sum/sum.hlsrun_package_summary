@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "C:/test\\sum\\sum\\sum.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "05/06/25 14:38:32",
+ "timestampMillis": "1746535112496",
+ "buildStep": {
+  "cmdId": "f63f1419-3034-4833-8fd9-5e74256f4cbc",
+  "name": "vitis-run",
+  "logFile": "C:/test\\sum\\sum\\logs\\sum.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\test\\sum\\hls_config.cfg --work_dir sum ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "C:\\test\\sum\\hls_config.cfg",
+   "--work_dir",
+   "sum"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\test\\sum"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/06/25 14:38:32",
+ "timestampMillis": "1746535112496",
+ "status": {
+  "cmdId": "f63f1419-3034-4833-8fd9-5e74256f4cbc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "05/06/25 14:38:38",
+ "timestampMillis": "1746535118785",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sum",
+     "file": "C:/test\\sum\\sum\\sum.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/test\\sum\\coef_add.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "05/06/25 14:38:38",
+ "timestampMillis": "1746535118786",
+ "buildStep": {
+  "cmdId": "f0845340-8879-4daf-afea-0fbab68e5d25",
+  "name": "",
+  "logFile": "C:/test\\sum\\sum\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\test\\sum"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/06/25 14:38:38",
+ "timestampMillis": "1746535118786",
+ "status": {
+  "cmdId": "f0845340-8879-4daf-afea-0fbab68e5d25",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/06/25 14:38:48",
+ "timestampMillis": "1746535128090",
+ "status": {
+  "cmdId": "f0845340-8879-4daf-afea-0fbab68e5d25",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/06/25 14:38:48",
+ "timestampMillis": "1746535128305",
+ "status": {
+  "cmdId": "f63f1419-3034-4833-8fd9-5e74256f4cbc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/06/25 14:38:48",
+ "timestampMillis": "1746535128305",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/06/25 14:38:48",
+ "timestampMillis": "1746535128306",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

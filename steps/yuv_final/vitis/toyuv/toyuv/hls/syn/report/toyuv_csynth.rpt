@@ -1,0 +1,255 @@
+
+
+================================================================
+== Vitis HLS Report for 'toyuv'
+================================================================
+* Date:           Wed Jun 18 13:42:34 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        toyuv
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.923 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                           |                                |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                  Instance                 |             Module             |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +-------------------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150  |toyuv_Pipeline_VITIS_LOOP_24_1  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +-------------------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      8|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|   23|    4104|   2843|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    253|    -|
+|Register         |        -|    -|     265|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|   23|    4369|   3104|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   10|       4|      5|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |                  Instance                 |             Module             | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |control_s_axi_U                            |control_s_axi                   |        0|   0|   144|   232|    0|
+    |mul_32s_32s_32_2_1_U55                     |mul_32s_32s_32_2_1              |        0|   3|   165|    50|    0|
+    |grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150  |toyuv_Pipeline_VITIS_LOOP_24_1  |        0|  20|  3795|  2561|    0|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |Total                                      |                                |        0|  23|  4104|  2843|    0|
+    +-------------------------------------------+--------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                     Variable Name                     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150_ch_u_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150_ch_v_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150_ch_y_TREADY  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state6                                        |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                  |          |   0|  0|   8|           4|           4|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  37|          7|    1|          7|
+    |ch_b_TREADY_int_regslice  |   9|          2|    1|          2|
+    |ch_g_TREADY_int_regslice  |   9|          2|    1|          2|
+    |ch_r_TREADY_int_regslice  |   9|          2|    1|          2|
+    |ch_u_TDATA_int_regslice   |   9|          2|   32|         64|
+    |ch_u_TDEST_int_regslice   |   9|          2|    6|         12|
+    |ch_u_TID_int_regslice     |   9|          2|    5|         10|
+    |ch_u_TKEEP_int_regslice   |   9|          2|    4|          8|
+    |ch_u_TLAST_int_regslice   |   9|          2|    1|          2|
+    |ch_u_TSTRB_int_regslice   |   9|          2|    4|          8|
+    |ch_u_TUSER_int_regslice   |   9|          2|    2|          4|
+    |ch_v_TDATA_int_regslice   |   9|          2|   32|         64|
+    |ch_v_TDEST_int_regslice   |   9|          2|    6|         12|
+    |ch_v_TID_int_regslice     |   9|          2|    5|         10|
+    |ch_v_TKEEP_int_regslice   |   9|          2|    4|          8|
+    |ch_v_TLAST_int_regslice   |   9|          2|    1|          2|
+    |ch_v_TSTRB_int_regslice   |   9|          2|    4|          8|
+    |ch_v_TUSER_int_regslice   |   9|          2|    2|          4|
+    |ch_y_TDATA_int_regslice   |   9|          2|   32|         64|
+    |ch_y_TDEST_int_regslice   |   9|          2|    6|         12|
+    |ch_y_TID_int_regslice     |   9|          2|    5|         10|
+    |ch_y_TKEEP_int_regslice   |   9|          2|    4|          8|
+    |ch_y_TLAST_int_regslice   |   9|          2|    1|          2|
+    |ch_y_TSTRB_int_regslice   |   9|          2|    4|          8|
+    |ch_y_TUSER_int_regslice   |   9|          2|    2|          4|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 253|         55|  166|        337|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |                          Name                          | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                               |   6|   0|    6|          0|
+    |ch_u_TDATA_reg                                          |  32|   0|   32|          0|
+    |ch_u_TDEST_reg                                          |   6|   0|    6|          0|
+    |ch_u_TID_reg                                            |   5|   0|    5|          0|
+    |ch_u_TKEEP_reg                                          |   4|   0|    4|          0|
+    |ch_u_TLAST_reg                                          |   1|   0|    1|          0|
+    |ch_u_TSTRB_reg                                          |   4|   0|    4|          0|
+    |ch_u_TUSER_reg                                          |   2|   0|    2|          0|
+    |ch_v_TDATA_reg                                          |  32|   0|   32|          0|
+    |ch_v_TDEST_reg                                          |   6|   0|    6|          0|
+    |ch_v_TID_reg                                            |   5|   0|    5|          0|
+    |ch_v_TKEEP_reg                                          |   4|   0|    4|          0|
+    |ch_v_TLAST_reg                                          |   1|   0|    1|          0|
+    |ch_v_TSTRB_reg                                          |   4|   0|    4|          0|
+    |ch_v_TUSER_reg                                          |   2|   0|    2|          0|
+    |ch_y_TDATA_reg                                          |  32|   0|   32|          0|
+    |ch_y_TDEST_reg                                          |   6|   0|    6|          0|
+    |ch_y_TID_reg                                            |   5|   0|    5|          0|
+    |ch_y_TKEEP_reg                                          |   4|   0|    4|          0|
+    |ch_y_TLAST_reg                                          |   1|   0|    1|          0|
+    |ch_y_TSTRB_reg                                          |   4|   0|    4|          0|
+    |ch_y_TUSER_reg                                          |   2|   0|    2|          0|
+    |grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150_ap_start_reg  |   1|   0|    1|          0|
+    |height_read_reg_243                                     |  32|   0|   32|          0|
+    |total_reg_253                                           |  32|   0|   32|          0|
+    |width_read_reg_248                                      |  32|   0|   32|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                   | 265|   0|  265|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+---------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-----------------------+-----+-----+------------+---------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|       s_axi|        control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|        control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|        control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|       s_axi|        control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|        control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|        control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|        control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|          toyuv|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|          toyuv|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|          toyuv|  return value|
+|ch_r_TDATA             |   in|   32|        axis|  ch_r_V_data_V|       pointer|
+|ch_r_TVALID            |   in|    1|        axis|  ch_r_V_dest_V|       pointer|
+|ch_r_TREADY            |  out|    1|        axis|  ch_r_V_dest_V|       pointer|
+|ch_r_TDEST             |   in|    6|        axis|  ch_r_V_dest_V|       pointer|
+|ch_r_TKEEP             |   in|    4|        axis|  ch_r_V_keep_V|       pointer|
+|ch_r_TSTRB             |   in|    4|        axis|  ch_r_V_strb_V|       pointer|
+|ch_r_TUSER             |   in|    2|        axis|  ch_r_V_user_V|       pointer|
+|ch_r_TLAST             |   in|    1|        axis|  ch_r_V_last_V|       pointer|
+|ch_r_TID               |   in|    5|        axis|    ch_r_V_id_V|       pointer|
+|ch_g_TDATA             |   in|   32|        axis|  ch_g_V_data_V|       pointer|
+|ch_g_TVALID            |   in|    1|        axis|  ch_g_V_dest_V|       pointer|
+|ch_g_TREADY            |  out|    1|        axis|  ch_g_V_dest_V|       pointer|
+|ch_g_TDEST             |   in|    6|        axis|  ch_g_V_dest_V|       pointer|
+|ch_g_TKEEP             |   in|    4|        axis|  ch_g_V_keep_V|       pointer|
+|ch_g_TSTRB             |   in|    4|        axis|  ch_g_V_strb_V|       pointer|
+|ch_g_TUSER             |   in|    2|        axis|  ch_g_V_user_V|       pointer|
+|ch_g_TLAST             |   in|    1|        axis|  ch_g_V_last_V|       pointer|
+|ch_g_TID               |   in|    5|        axis|    ch_g_V_id_V|       pointer|
+|ch_b_TDATA             |   in|   32|        axis|  ch_b_V_data_V|       pointer|
+|ch_b_TVALID            |   in|    1|        axis|  ch_b_V_dest_V|       pointer|
+|ch_b_TREADY            |  out|    1|        axis|  ch_b_V_dest_V|       pointer|
+|ch_b_TDEST             |   in|    6|        axis|  ch_b_V_dest_V|       pointer|
+|ch_b_TKEEP             |   in|    4|        axis|  ch_b_V_keep_V|       pointer|
+|ch_b_TSTRB             |   in|    4|        axis|  ch_b_V_strb_V|       pointer|
+|ch_b_TUSER             |   in|    2|        axis|  ch_b_V_user_V|       pointer|
+|ch_b_TLAST             |   in|    1|        axis|  ch_b_V_last_V|       pointer|
+|ch_b_TID               |   in|    5|        axis|    ch_b_V_id_V|       pointer|
+|ch_y_TDATA             |  out|   32|        axis|  ch_y_V_data_V|       pointer|
+|ch_y_TVALID            |  out|    1|        axis|  ch_y_V_dest_V|       pointer|
+|ch_y_TREADY            |   in|    1|        axis|  ch_y_V_dest_V|       pointer|
+|ch_y_TDEST             |  out|    6|        axis|  ch_y_V_dest_V|       pointer|
+|ch_y_TKEEP             |  out|    4|        axis|  ch_y_V_keep_V|       pointer|
+|ch_y_TSTRB             |  out|    4|        axis|  ch_y_V_strb_V|       pointer|
+|ch_y_TUSER             |  out|    2|        axis|  ch_y_V_user_V|       pointer|
+|ch_y_TLAST             |  out|    1|        axis|  ch_y_V_last_V|       pointer|
+|ch_y_TID               |  out|    5|        axis|    ch_y_V_id_V|       pointer|
+|ch_u_TDATA             |  out|   32|        axis|  ch_u_V_data_V|       pointer|
+|ch_u_TVALID            |  out|    1|        axis|  ch_u_V_dest_V|       pointer|
+|ch_u_TREADY            |   in|    1|        axis|  ch_u_V_dest_V|       pointer|
+|ch_u_TDEST             |  out|    6|        axis|  ch_u_V_dest_V|       pointer|
+|ch_u_TKEEP             |  out|    4|        axis|  ch_u_V_keep_V|       pointer|
+|ch_u_TSTRB             |  out|    4|        axis|  ch_u_V_strb_V|       pointer|
+|ch_u_TUSER             |  out|    2|        axis|  ch_u_V_user_V|       pointer|
+|ch_u_TLAST             |  out|    1|        axis|  ch_u_V_last_V|       pointer|
+|ch_u_TID               |  out|    5|        axis|    ch_u_V_id_V|       pointer|
+|ch_v_TDATA             |  out|   32|        axis|  ch_v_V_data_V|       pointer|
+|ch_v_TVALID            |  out|    1|        axis|  ch_v_V_dest_V|       pointer|
+|ch_v_TREADY            |   in|    1|        axis|  ch_v_V_dest_V|       pointer|
+|ch_v_TDEST             |  out|    6|        axis|  ch_v_V_dest_V|       pointer|
+|ch_v_TKEEP             |  out|    4|        axis|  ch_v_V_keep_V|       pointer|
+|ch_v_TSTRB             |  out|    4|        axis|  ch_v_V_strb_V|       pointer|
+|ch_v_TUSER             |  out|    2|        axis|  ch_v_V_user_V|       pointer|
+|ch_v_TLAST             |  out|    1|        axis|  ch_v_V_last_V|       pointer|
+|ch_v_TID               |  out|    5|        axis|    ch_v_V_id_V|       pointer|
++-----------------------+-----+-----+------------+---------------+--------------+
+

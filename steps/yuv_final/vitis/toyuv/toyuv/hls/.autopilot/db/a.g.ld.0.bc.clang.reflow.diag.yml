@@ -1,0 +1,22 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_toyuv_ir
+Args:            
+  - Callee:          'toyuv(int, int, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: /home/jeanleo2/yuv_final/toyuv.cpp, Line: 11, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_toyuv_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          '> at '
+  - LoopLoc:         '/home/jeanleo2/yuv_final/toyuv.cpp:24:22'
+  - String:          ' '
+...

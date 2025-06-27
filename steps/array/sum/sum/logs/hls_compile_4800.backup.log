@@ -1,0 +1,21 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/test/sum/sum 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2001] file not found 'C:\Users\Jean-LÃ©o\Desktop\test1\coef_add.cpp' see [hls] from C:/test/sum/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:\Users\Jean-LÃ©o\Desktop\test1\coef_add.cpp' from C:/test/sum/hls_config.cfg(7)
+WARNING: [HLS 200-40] Cannot find design file 'C:/Users/Jean-LÃ©o/Desktop/test1/coef_add.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.top=sum' from C:/test/sum/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/test/sum/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z007sclg400-1' from C:/test/sum/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z007s-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/test/sum/hls_config.cfg(5)
+WARNING: [HLS 200-40] Cannot find source file C:/Users/Jean-LÃ©o/Desktop/test1/coef_add.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 3.52 seconds; current allocated memory: 266.344 MB.
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (:0)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 266.547 MB.
+ERROR: [HLS 200-70] Cannot find any design unit to elaborate.
+ERROR: Error in linking the design.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 3.593 seconds; peak allocated memory: 266.766 MB.

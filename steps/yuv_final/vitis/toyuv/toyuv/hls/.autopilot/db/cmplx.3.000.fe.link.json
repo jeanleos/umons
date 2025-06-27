@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "toyuv.cpp",
+    "fileloc": 9,
+    "instructions": 101,
+    "loads": {
+      "L": 3
+    },
+    "name": "toyuv",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 506
+  }
+}

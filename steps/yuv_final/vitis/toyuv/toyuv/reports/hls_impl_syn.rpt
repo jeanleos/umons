@@ -1,0 +1,580 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Tue Jun 17 13:16:50 CEST 2025
+    * Version:         2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:         toyuv
+    * Solution:        hls (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              2319
+FF:               2087
+DSP:              15
+BRAM:             0
+URAM:             0
+SRL:              70
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 7.885       |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++-------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                            | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++-------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                            | 2319 | 2087 | 15  |      |      |     |        |      |         |          |        |
+|   (inst)                                        |      | 129  |     |      |      |     |        |      |         |          |        |
+|   control_r_s_axi_U                             | 76   | 104  |     |      |      |     |        |      |         |          |        |
+|   control_s_axi_U                               | 29   | 26   |     |      |      |     |        |      |         |          |        |
+|   grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150     | 1723 | 1169 | 12  |      |      |     |        |      |         |          |        |
+|     (grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150) | 765  | 944  |     |      |      |     |        |      |         |          |        |
+|     mul_32s_15s_32_2_1_U4                       | 118  | 31   |     |      |      |     |        |      |         |          |        |
+|     mul_32s_15s_32_2_1_U7                       | 194  | 31   |     |      |      |     |        |      |         |          |        |
+|     mul_32s_16s_32_2_1_U5                       | 119  | 29   |     |      |      |     |        |      |         |          |        |
+|     mul_32s_17s_32_2_1_U6                       | 219  | 30   |     |      |      |     |        |      |         |          |        |
+|     mul_32s_34ns_65_2_1_U1                      | 78   | 34   | 4   |      |      |     |        |      |         |          |        |
+|     mul_32s_34ns_65_2_1_U2                      | 80   | 34   | 4   |      |      |     |        |      |         |          |        |
+|     mul_32s_34ns_65_2_1_U3                      | 80   | 34   | 4   |      |      |     |        |      |         |          |        |
+|   mul_32s_32s_32_2_1_U55                        | 15   | 17   | 3   |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_b_V_data_V_U                 | 39   | 69   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_b_V_dest_V_U                 | 10   | 15   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_b_V_id_V_U                   | 9    | 13   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_b_V_keep_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_b_V_last_V_U                 | 5    | 5    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_b_V_strb_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_b_V_user_V_U                 | 8    | 7    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_g_V_data_V_U                 | 58   | 69   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_g_V_dest_V_U                 | 10   | 15   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_g_V_id_V_U                   | 9    | 13   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_g_V_keep_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_g_V_last_V_U                 | 5    | 5    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_g_V_strb_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_g_V_user_V_U                 | 8    | 7    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_r_V_data_V_U                 | 59   | 69   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_r_V_dest_V_U                 | 10   | 15   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_r_V_id_V_U                   | 9    | 13   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_r_V_keep_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_r_V_last_V_U                 | 5    | 5    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_r_V_strb_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_r_V_user_V_U                 | 8    | 7    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_u_V_data_V_U                 | 14   | 21   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_u_V_dest_V_U                 | 10   | 15   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_u_V_id_V_U                   | 9    | 13   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_u_V_keep_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_u_V_last_V_U                 | 4    | 5    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_u_V_strb_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_u_V_user_V_U                 | 4    | 7    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_v_V_data_V_U                 | 16   | 21   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_v_V_dest_V_U                 | 10   | 15   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_v_V_id_V_U                   | 9    | 13   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_v_V_keep_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_v_V_last_V_U                 | 4    | 5    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_v_V_strb_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_v_V_user_V_U                 | 4    | 7    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_y_V_data_V_U                 | 17   | 21   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_y_V_dest_V_U                 | 10   | 15   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_y_V_id_V_U                   | 9    | 13   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_y_V_keep_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_y_V_last_V_U                 | 4    | 5    |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_y_V_strb_V_U                 | 8    | 11   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_ch_y_V_user_V_U                 | 4    | 7    |     |      |      |     |        |      |         |          |        |
++-------------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 4.36%  | OK     |
+| FD                                                        | 50%       | 1.96%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.40%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 6.82%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 6.82%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 74     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.23   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+-------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                          | ENDPOINT PIN                                                                    | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                         |                                                                                 |              |            |                |          DELAY |        DELAY |
++-------+-------+-------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.115 | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]/C | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[31]/D |           14 |         29 |          7.910 |          4.551 |        3.359 |
+| Path2 | 2.220 | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]/C | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[30]/D |           14 |         29 |          7.805 |          4.446 |        3.359 |
+| Path3 | 2.229 | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]/C | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[29]/D |           12 |         27 |          7.796 |          4.316 |        3.480 |
+| Path4 | 2.232 | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]/C | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[27]/D |           13 |         29 |          7.793 |          4.434 |        3.359 |
+| Path5 | 2.235 | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]/C | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[31]/D |           12 |         27 |          7.790 |          4.310 |        3.480 |
++-------+-------+-------------------------------------------------------------------------+---------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                    | Primitive Type       |
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[30]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[29]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[27]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    +------------------------------------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                                    | Primitive Type       |
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[30]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[29]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[27]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    +------------------------------------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                                    | Primitive Type       |
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[30]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[29]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[27]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    +------------------------------------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                                    | Primitive Type       |
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[30]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[29]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[27]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    +------------------------------------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                                    | Primitive Type       |
+    +------------------------------------------------------------------------------------------------+----------------------+
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__3        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[30]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[29]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_5_reg_1240_reg[11]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__0        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__1        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__0_carry__2        | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_4  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2_i_8  | LUT.others.LUT4      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__254_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_9  | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_1  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2_i_5  | LUT.others.LUT6      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__2      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/tmp_product__333_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_17s_32_2_1_U6/buff0_reg[27]                  | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/add_ln36_2_reg_1235_reg[10]                          | FLOP_LATCH.flop.FDRE |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry              | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__0           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__1           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__2           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product_carry__3           | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry         | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__0      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__158_carry__1      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_11 | LUT.others.LUT3      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3_i_3  | LUT.others.LUT5      |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__3      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/tmp_product__195_carry__4      | CARRY.others.CARRY4  |
+    | grp_toyuv_Pipeline_VITIS_LOOP_24_1_fu_150/mul_32s_15s_32_2_1_U4/buff0_reg[31]                  | FLOP_LATCH.flop.FDRE |
+    +------------------------------------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+--------------------------------------------------------------+
+| Report Type              | Report Location                                              |
++--------------------------+--------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/toyuv_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/toyuv_failfast_synth.rpt                 |
+| power                    | impl/verilog/report/toyuv_power_synth.rpt                    |
+| timing                   | impl/verilog/report/toyuv_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/toyuv_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/toyuv_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/toyuv_utilization_hierarchical_synth.rpt |
++--------------------------+--------------------------------------------------------------+
+
+

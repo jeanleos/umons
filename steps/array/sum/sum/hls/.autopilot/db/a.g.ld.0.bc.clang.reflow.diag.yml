@@ -1,0 +1,21 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_sum_ir
+Args:            
+  - Callee:          'sum(int*, int*)'
+    DebugLoc:        { File: coef_add.cpp, Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_sum_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_14_2
+  - String:          '> at '
+  - LoopLoc:         'coef_add.cpp:14:26'
+  - String:          ' '
+...
