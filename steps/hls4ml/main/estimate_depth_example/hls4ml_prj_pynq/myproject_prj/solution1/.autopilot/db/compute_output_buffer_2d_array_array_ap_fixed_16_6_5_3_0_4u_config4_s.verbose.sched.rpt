@@ -1,0 +1,224 @@
+
+
+================================================================
+== Vivado HLS Report for 'compute_output_buffer_2d_array_array_ap_fixed_16_6_5_3_0_4u_config4_s'
+================================================================
+* Date:           Fri May 23 16:38:53 2025
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.321 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|       10| 10.000 ns | 50.000 ns |    2|   10|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 4 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.45>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %res_stream_V_data_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %res_stream_V_data_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %res_stream_V_data_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %res_stream_V_data_3_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%in_elem_data_3_V_read_3 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_elem_data_3_V_read)"   --->   Operation 10 'read' 'in_elem_data_3_V_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%in_elem_data_2_V_read_3 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_elem_data_2_V_read)"   --->   Operation 11 'read' 'in_elem_data_2_V_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%in_elem_data_1_V_read_3 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_elem_data_1_V_read)"   --->   Operation 12 'read' 'in_elem_data_1_V_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%in_elem_data_0_V_read_3 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_elem_data_0_V_read)"   --->   Operation 13 'read' 'in_elem_data_0_V_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%kernel_data_V_2_4_load = load i16* @kernel_data_V_2_4, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 14 'load' 'kernel_data_V_2_4_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%kernel_data_V_2_5_load = load i16* @kernel_data_V_2_5, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 15 'load' 'kernel_data_V_2_5_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%kernel_data_V_2_6_load = load i16* @kernel_data_V_2_6, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 16 'load' 'kernel_data_V_2_6_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%kernel_data_V_2_7_load = load i16* @kernel_data_V_2_7, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 17 'load' 'kernel_data_V_2_7_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%kernel_data_V_2_12_load = load i16* @kernel_data_V_2_12, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 18 'load' 'kernel_data_V_2_12_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%kernel_data_V_2_13_load = load i16* @kernel_data_V_2_13, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 19 'load' 'kernel_data_V_2_13_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%kernel_data_V_2_14_load = load i16* @kernel_data_V_2_14, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 20 'load' 'kernel_data_V_2_14_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%kernel_data_V_2_15_load = load i16* @kernel_data_V_2_15, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 21 'load' 'kernel_data_V_2_15_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.61ns)   --->   "%call_ret = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @"shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 4u>, config4>"(i16 %in_elem_data_0_V_read_3, i16 %in_elem_data_1_V_read_3, i16 %in_elem_data_2_V_read_3, i16 %in_elem_data_3_V_read_3, i16 %kernel_data_V_2_4_load, i16 %kernel_data_V_2_5_load, i16 %kernel_data_V_2_6_load, i16 %kernel_data_V_2_7_load, i16 %kernel_data_V_2_12_load, i16 %kernel_data_V_2_13_load, i16 %kernel_data_V_2_14_load, i16 %kernel_data_V_2_15_load)" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 22 'call' 'call_ret' <Predicate = true> <Delay = 1.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%kernel_data_V_2_11_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 7" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 23 'extractvalue' 'kernel_data_V_2_11_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%kernel_data_V_2_10_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 6" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 24 'extractvalue' 'kernel_data_V_2_10_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%kernel_data_V_2_9_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 5" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 25 'extractvalue' 'kernel_data_V_2_9_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%kernel_data_V_2_8_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 4" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 26 'extractvalue' 'kernel_data_V_2_8_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%kernel_data_V_2_3_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 3" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 27 'extractvalue' 'kernel_data_V_2_3_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%kernel_data_V_2_2_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 28 'extractvalue' 'kernel_data_V_2_2_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%kernel_data_V_2_1_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 1" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 29 'extractvalue' 'kernel_data_V_2_1_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%kernel_data_V_2_0_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 0" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 30 'extractvalue' 'kernel_data_V_2_0_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%kernel_data_V_2_4_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 8" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 31 'extractvalue' 'kernel_data_V_2_4_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_4_ret, i16* @kernel_data_V_2_4, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 32 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%kernel_data_V_2_5_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 9" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 33 'extractvalue' 'kernel_data_V_2_5_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_5_ret, i16* @kernel_data_V_2_5, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 34 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%kernel_data_V_2_6_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 10" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 35 'extractvalue' 'kernel_data_V_2_6_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_6_ret, i16* @kernel_data_V_2_6, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 36 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%kernel_data_V_2_7_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 11" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 37 'extractvalue' 'kernel_data_V_2_7_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_7_ret, i16* @kernel_data_V_2_7, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 38 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%kernel_data_V_2_12_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 12" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 39 'extractvalue' 'kernel_data_V_2_12_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_12_ret, i16* @kernel_data_V_2_12, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 40 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%kernel_data_V_2_13_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 13" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 41 'extractvalue' 'kernel_data_V_2_13_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_13_ret, i16* @kernel_data_V_2_13, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 42 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%kernel_data_V_2_14_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 14" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 43 'extractvalue' 'kernel_data_V_2_14_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_14_ret, i16* @kernel_data_V_2_14, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 44 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%kernel_data_V_2_15_ret = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret, 15" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 45 'extractvalue' 'kernel_data_V_2_15_ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "store i16 %kernel_data_V_2_15_ret, i16* @kernel_data_V_2_15, align 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 46 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%sX_load = load i32* @sX, align 4" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 47 'load' 'sX_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (2.47ns)   --->   "%icmp_ln284 = icmp eq i32 %sX_load, 1" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 48 'icmp' 'icmp_ln284' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%sY_load = load i32* @sY, align 4" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 49 'load' 'sY_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (2.47ns)   --->   "%icmp_ln284_1 = icmp eq i32 %sY_load, 1" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 50 'icmp' 'icmp_ln284_1' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%pY_load = load i32* @pY, align 4" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 51 'load' 'pY_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (2.47ns)   --->   "%icmp_ln284_2 = icmp sgt i32 %pY_load, 0" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 52 'icmp' 'icmp_ln284_2' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%pX_load = load i32* @pX, align 4" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 53 'load' 'pX_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (2.47ns)   --->   "%icmp_ln284_3 = icmp sgt i32 %pX_load, 0" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 54 'icmp' 'icmp_ln284_3' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node and_ln284_2)   --->   "%and_ln284 = and i1 %icmp_ln284, %icmp_ln284_1" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 55 'and' 'and_ln284' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (0.00ns) (grouped into LUT with out node and_ln284_2)   --->   "%and_ln284_1 = and i1 %icmp_ln284_2, %icmp_ln284_3" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 56 'and' 'and_ln284_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln284_2 = and i1 %and_ln284_1, %and_ln284" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 57 'and' 'and_ln284_2' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "br i1 %and_ln284_2, label %0, label %._crit_edge22" [firmware/nnet_utils/nnet_conv_stream.h:284]   --->   Operation 58 'br' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.07>
+ST_2 : Operation 59 [2/2] (4.07ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16, i16 } @"dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config4_mult>.0.0.0.0.0"(i16 %kernel_data_V_2_0_ret, i16 %kernel_data_V_2_1_ret, i16 %kernel_data_V_2_2_ret, i16 %kernel_data_V_2_3_ret, i16 %kernel_data_V_2_4_ret, i16 %kernel_data_V_2_5_ret, i16 %kernel_data_V_2_6_ret, i16 %kernel_data_V_2_7_ret, i16 %kernel_data_V_2_8_ret, i16 %kernel_data_V_2_9_ret, i16 %kernel_data_V_2_10_ret, i16 %kernel_data_V_2_11_ret, i16 %kernel_data_V_2_12_ret, i16 %kernel_data_V_2_13_ret, i16 %kernel_data_V_2_14_ret, i16 %kernel_data_V_2_15_ret)" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 59 'call' 'call_ret1' <Predicate = true> <Delay = 4.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 3.90>
+ST_3 : Operation 60 [1/2] (3.90ns)   --->   "%call_ret1 = call fastcc { i16, i16, i16, i16 } @"dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config4_mult>.0.0.0.0.0"(i16 %kernel_data_V_2_0_ret, i16 %kernel_data_V_2_1_ret, i16 %kernel_data_V_2_2_ret, i16 %kernel_data_V_2_3_ret, i16 %kernel_data_V_2_4_ret, i16 %kernel_data_V_2_5_ret, i16 %kernel_data_V_2_6_ret, i16 %kernel_data_V_2_7_ret, i16 %kernel_data_V_2_8_ret, i16 %kernel_data_V_2_9_ret, i16 %kernel_data_V_2_10_ret, i16 %kernel_data_V_2_11_ret, i16 %kernel_data_V_2_12_ret, i16 %kernel_data_V_2_13_ret, i16 %kernel_data_V_2_14_ret, i16 %kernel_data_V_2_15_ret)" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 60 'call' 'call_ret1' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%res_out_0_V = extractvalue { i16, i16, i16, i16 } %call_ret1, 0" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 61 'extractvalue' 'res_out_0_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%res_out_1_V = extractvalue { i16, i16, i16, i16 } %call_ret1, 1" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 62 'extractvalue' 'res_out_1_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%res_out_2_V = extractvalue { i16, i16, i16, i16 } %call_ret1, 2" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 63 'extractvalue' 'res_out_2_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%res_out_3_V = extractvalue { i16, i16, i16, i16 } %call_ret1, 3" [firmware/nnet_utils/nnet_conv_stream.h:281]   --->   Operation 64 'extractvalue' 'res_out_3_V' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.32>
+ST_4 : Operation 65 [1/1] (2.18ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i16P.i16P.i16P.i16P(i16* %res_stream_V_data_0_V, i16* %res_stream_V_data_1_V, i16* %res_stream_V_data_2_V, i16* %res_stream_V_data_3_V, i16 %res_out_0_V, i16 %res_out_1_V, i16 %res_out_2_V, i16 %res_out_3_V)" [firmware/nnet_utils/nnet_conv_stream.h:299]   --->   Operation 65 'write' <Predicate = (and_ln284_2)> <Delay = 2.18> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "br label %._crit_edge22" [firmware/nnet_utils/nnet_conv_stream.h:300]   --->   Operation 66 'br' <Predicate = (and_ln284_2)> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (2.47ns)   --->   "%icmp_ln303 = icmp eq i32 %pX_load, 256" [firmware/nnet_utils/nnet_conv_stream.h:303]   --->   Operation 67 'icmp' 'icmp_ln303' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "br i1 %icmp_ln303, label %1, label %5" [firmware/nnet_utils/nnet_conv_stream.h:303]   --->   Operation 68 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (2.55ns)   --->   "%add_ln316 = add nsw i32 %pX_load, 1" [firmware/nnet_utils/nnet_conv_stream.h:316]   --->   Operation 69 'add' 'add_ln316' <Predicate = (!icmp_ln303)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 70 [1/1] (1.76ns)   --->   "store i32 %add_ln316, i32* @pX, align 4" [firmware/nnet_utils/nnet_conv_stream.h:316]   --->   Operation 70 'store' <Predicate = (!icmp_ln303)> <Delay = 1.76>
+ST_4 : Operation 71 [1/1] (2.55ns)   --->   "%add_ln318 = add i32 %sX_load, 1" [firmware/nnet_utils/nnet_conv_stream.h:318]   --->   Operation 71 'add' 'add_ln318' <Predicate = (!icmp_ln303 & !icmp_ln284)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 72 [1/1] (0.69ns)   --->   "%select_ln318 = select i1 %icmp_ln284, i32 1, i32 %add_ln318" [firmware/nnet_utils/nnet_conv_stream.h:318]   --->   Operation 72 'select' 'select_ln318' <Predicate = (!icmp_ln303)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 73 [1/1] (1.76ns)   --->   "store i32 0, i32* @pX, align 4" [firmware/nnet_utils/nnet_conv_stream.h:305]   --->   Operation 73 'store' <Predicate = (icmp_ln303)> <Delay = 1.76>
+ST_4 : Operation 74 [1/1] (1.76ns)   --->   "store i32 0, i32* @sX, align 4" [firmware/nnet_utils/nnet_conv_stream.h:306]   --->   Operation 74 'store' <Predicate = (icmp_ln303)> <Delay = 1.76>
+ST_4 : Operation 75 [1/1] (2.47ns)   --->   "%icmp_ln307 = icmp eq i32 %pY_load, 256" [firmware/nnet_utils/nnet_conv_stream.h:307]   --->   Operation 75 'icmp' 'icmp_ln307' <Predicate = (icmp_ln303)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "br i1 %icmp_ln307, label %2, label %3" [firmware/nnet_utils/nnet_conv_stream.h:307]   --->   Operation 76 'br' <Predicate = (icmp_ln303)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (2.55ns)   --->   "%add_ln311 = add nsw i32 %pY_load, 1" [firmware/nnet_utils/nnet_conv_stream.h:311]   --->   Operation 77 'add' 'add_ln311' <Predicate = (icmp_ln303 & !icmp_ln307)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (1.76ns)   --->   "store i32 %add_ln311, i32* @pY, align 4" [firmware/nnet_utils/nnet_conv_stream.h:311]   --->   Operation 78 'store' <Predicate = (icmp_ln303 & !icmp_ln307)> <Delay = 1.76>
+ST_4 : Operation 79 [1/1] (2.55ns)   --->   "%add_ln313 = add i32 %sY_load, 1" [firmware/nnet_utils/nnet_conv_stream.h:313]   --->   Operation 79 'add' 'add_ln313' <Predicate = (icmp_ln303 & !icmp_ln307 & !icmp_ln284_1)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [1/1] (0.69ns)   --->   "%select_ln313 = select i1 %icmp_ln284_1, i32 1, i32 %add_ln313" [firmware/nnet_utils/nnet_conv_stream.h:313]   --->   Operation 80 'select' 'select_ln313' <Predicate = (icmp_ln303 & !icmp_ln307)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 81 [1/1] (1.76ns)   --->   "store i32 0, i32* @pY, align 4" [firmware/nnet_utils/nnet_conv_stream.h:308]   --->   Operation 81 'store' <Predicate = (icmp_ln303 & icmp_ln307)> <Delay = 1.76>
+ST_4 : Operation 82 [1/1] (1.76ns)   --->   "br label %4" [firmware/nnet_utils/nnet_conv_stream.h:310]   --->   Operation 82 'br' <Predicate = (icmp_ln303 & icmp_ln307)> <Delay = 1.76>
+
+State 5 <SV = 4> <Delay = 1.76>
+ST_5 : Operation 83 [1/1] (1.76ns)   --->   "store i32 %select_ln318, i32* @sX, align 4" [firmware/nnet_utils/nnet_conv_stream.h:318]   --->   Operation 83 'store' <Predicate = (!icmp_ln303)> <Delay = 1.76>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "br label %6"   --->   Operation 84 'br' <Predicate = (!icmp_ln303)> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (1.76ns)   --->   "br label %4"   --->   Operation 85 'br' <Predicate = (icmp_ln303 & !icmp_ln307)> <Delay = 1.76>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%storemerge = phi i32 [ %select_ln313, %3 ], [ 0, %2 ]" [firmware/nnet_utils/nnet_conv_stream.h:313]   --->   Operation 86 'phi' 'storemerge' <Predicate = (icmp_ln303)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "store i32 %storemerge, i32* @sY, align 4" [firmware/nnet_utils/nnet_conv_stream.h:309]   --->   Operation 87 'store' <Predicate = (icmp_ln303)> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "br label %6" [firmware/nnet_utils/nnet_conv_stream.h:315]   --->   Operation 88 'br' <Predicate = (icmp_ln303)> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "ret void" [firmware/nnet_utils/nnet_conv_stream.h:320]   --->   Operation 89 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.45ns
+The critical path consists of the following:
+	'load' operation ('sX_load', firmware/nnet_utils/nnet_conv_stream.h:284) on static variable 'sX' [69]  (0 ns)
+	'icmp' operation ('icmp_ln284', firmware/nnet_utils/nnet_conv_stream.h:284) [70]  (2.47 ns)
+	'and' operation ('and_ln284', firmware/nnet_utils/nnet_conv_stream.h:284) [77]  (0 ns)
+	'and' operation ('and_ln284_2', firmware/nnet_utils/nnet_conv_stream.h:284) [79]  (0.978 ns)
+
+ <State 2>: 4.08ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_conv_stream.h:281) to 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config4_mult>.0.0.0.0.0' [82]  (4.08 ns)
+
+ <State 3>: 3.9ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', firmware/nnet_utils/nnet_conv_stream.h:281) to 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config4_mult>.0.0.0.0.0' [82]  (3.9 ns)
+
+ <State 4>: 4.32ns
+The critical path consists of the following:
+	'add' operation ('add_ln316', firmware/nnet_utils/nnet_conv_stream.h:316) [93]  (2.55 ns)
+	'store' operation ('store_ln316', firmware/nnet_utils/nnet_conv_stream.h:316) of variable 'add_ln316', firmware/nnet_utils/nnet_conv_stream.h:316 on static variable 'pX' [94]  (1.77 ns)
+
+ <State 5>: 1.77ns
+The critical path consists of the following:
+	'store' operation ('store_ln318', firmware/nnet_utils/nnet_conv_stream.h:318) of variable 'select_ln318', firmware/nnet_utils/nnet_conv_stream.h:318 on static variable 'sX' [97]  (1.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

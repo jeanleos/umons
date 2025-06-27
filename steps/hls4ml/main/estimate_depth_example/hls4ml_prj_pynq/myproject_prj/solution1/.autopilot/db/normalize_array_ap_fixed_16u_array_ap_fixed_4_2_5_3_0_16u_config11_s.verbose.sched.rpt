@@ -1,0 +1,290 @@
+
+
+================================================================
+== Vivado HLS Report for 'normalize_array_ap_fixed_16u_array_ap_fixed_4_2_5_3_0_16u_config11_s'
+================================================================
+* Date:           Sun May 25 15:18:19 2025
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.013 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   |  min |  max |   Type  |
+    +---------+---------+----------+----------+------+------+---------+
+    |     1028|     1028| 5.140 us | 5.140 us |  1028|  1028|   none  |
+    +---------+---------+----------+----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- BatchNormLoop  |     1026|     1026|         4|          1|          1|  1024|    yes   |
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 6 3 
+3 --> 4 
+4 --> 5 
+5 --> 2 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_15_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_14_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_13_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_12_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_11_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_10_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_9_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_8_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_7_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_6_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_5_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 17 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_4_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 18 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_3_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 19 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 21 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %res_V_data_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 22 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_15_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 23 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_14_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 24 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_13_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 25 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_12_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 26 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_11_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 27 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_10_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 28 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_9_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_8_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 30 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_7_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_6_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_5_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_4_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_3_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %data_V_data_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 16384, [4 x i8]* @p_str68, [1 x i8]* @p_str35, [1 x i8]* @p_str35, [1 x i8]* @p_str35) nounwind" [firmware/nnet_utils/nnet_batchnorm_stream.h:22]   --->   Operation 39 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (1.76ns)   --->   "br label %1" [firmware/nnet_utils/nnet_batchnorm_stream.h:25]   --->   Operation 40 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.88>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%i_0 = phi i11 [ 0, %0 ], [ %i, %BatchNormLoop ]"   --->   Operation 41 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (1.88ns)   --->   "%icmp_ln25 = icmp eq i11 %i_0, -1024" [firmware/nnet_utils/nnet_batchnorm_stream.h:25]   --->   Operation 42 'icmp' 'icmp_ln25' <Predicate = true> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)"   --->   Operation 43 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (1.63ns)   --->   "%i = add i11 %i_0, 1" [firmware/nnet_utils/nnet_batchnorm_stream.h:25]   --->   Operation 44 'add' 'i' <Predicate = true> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "br i1 %icmp_ln25, label %2, label %BatchNormLoop" [firmware/nnet_utils/nnet_batchnorm_stream.h:25]   --->   Operation 45 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.01>
+ST_3 : Operation 46 [1/1] (2.18ns)   --->   "%empty_129 = call { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } @_ssdm_op_Read.ap_fifo.volatile.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P(i4* %data_V_data_0_V, i4* %data_V_data_1_V, i4* %data_V_data_2_V, i4* %data_V_data_3_V, i4* %data_V_data_4_V, i4* %data_V_data_5_V, i4* %data_V_data_6_V, i4* %data_V_data_7_V, i4* %data_V_data_8_V, i4* %data_V_data_9_V, i4* %data_V_data_10_V, i4* %data_V_data_11_V, i4* %data_V_data_12_V, i4* %data_V_data_13_V, i4* %data_V_data_14_V, i4* %data_V_data_15_V)" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 46 'read' 'empty_129' <Predicate = (!icmp_ln25)> <Delay = 2.18> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 4> <Depth = 3> <FIFO>
+ST_3 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192)   --->   "%tmp_data_V_0 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 0" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 47 'extractvalue' 'tmp_data_V_0' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_28)   --->   "%tmp_data_V_1 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 1" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 48 'extractvalue' 'tmp_data_V_1' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_29)   --->   "%tmp_data_V_2 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 2" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 49 'extractvalue' 'tmp_data_V_2' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_data_V_3 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 3" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 50 'extractvalue' 'tmp_data_V_3' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_31)   --->   "%tmp_data_V_4 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 4" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 51 'extractvalue' 'tmp_data_V_4' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node sub_ln1192_7)   --->   "%tmp_data_V_5 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 5" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 52 'extractvalue' 'tmp_data_V_5' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_33)   --->   "%tmp_data_V_6 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 6" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 53 'extractvalue' 'tmp_data_V_6' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_34)   --->   "%tmp_data_V_7 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 7" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 54 'extractvalue' 'tmp_data_V_7' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_35)   --->   "%tmp_data_V_8 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 8" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 55 'extractvalue' 'tmp_data_V_8' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_data_V_9 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 9" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 56 'extractvalue' 'tmp_data_V_9' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_data_V_10 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 10" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 57 'extractvalue' 'tmp_data_V_10' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_38)   --->   "%tmp_data_V_11 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 11" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 58 'extractvalue' 'tmp_data_V_11' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_data_V_12 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 12" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 59 'extractvalue' 'tmp_data_V_12' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_data_V_13 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 13" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 60 'extractvalue' 'tmp_data_V_13' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_data_V_14 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 14" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 61 'extractvalue' 'tmp_data_V_14' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_42)   --->   "%tmp_data_V_15 = extractvalue { i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4, i4 } %empty_129, 15" [firmware/nnet_utils/nnet_batchnorm_stream.h:28]   --->   Operation 62 'extractvalue' 'tmp_data_V_15' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192)   --->   "%shl_ln = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_data_V_0, i1 false)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 63 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192)   --->   "%sext_ln1192 = sext i5 %shl_ln to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 64 'sext' 'sext_ln1192' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (1.78ns) (out node of the LUT)   --->   "%add_ln1192 = add i6 -16, %sext_ln1192" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 65 'add' 'add_ln1192' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_data_0_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 66 'partselect' 'tmp_data_0_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_28)   --->   "%shl_ln1118_s = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_data_V_1, i1 false)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 67 'bitconcatenate' 'shl_ln1118_s' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_28)   --->   "%sext_ln1192_21 = sext i5 %shl_ln1118_s to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 68 'sext' 'sext_ln1192_21' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (1.78ns) (out node of the LUT)   --->   "%add_ln1192_28 = add i6 -16, %sext_ln1192_21" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 69 'add' 'add_ln1192_28' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_data_1_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_28, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 70 'partselect' 'tmp_data_1_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_29)   --->   "%sext_ln1192_22 = sext i4 %tmp_data_V_2 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 71 'sext' 'sext_ln1192_22' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (1.78ns) (out node of the LUT)   --->   "%add_ln1192_29 = add i6 -16, %sext_ln1192_22" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 72 'add' 'add_ln1192_29' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_data_2_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_29, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 73 'partselect' 'tmp_data_2_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln1192 = trunc i4 %tmp_data_V_3 to i3" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 74 'trunc' 'trunc_ln1192' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_31)   --->   "%shl_ln1118_12 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_data_V_4, i1 false)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 75 'bitconcatenate' 'shl_ln1118_12' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_31)   --->   "%sext_ln1192_24 = sext i5 %shl_ln1118_12 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 76 'sext' 'sext_ln1192_24' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (1.78ns) (out node of the LUT)   --->   "%add_ln1192_31 = add i6 -16, %sext_ln1192_24" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 77 'add' 'add_ln1192_31' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_data_4_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_31, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 78 'partselect' 'tmp_data_4_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node sub_ln1192_7)   --->   "%shl_ln1118_13 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_data_V_5, i1 false)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 79 'bitconcatenate' 'shl_ln1118_13' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node sub_ln1192_7)   --->   "%sext_ln1118 = sext i5 %shl_ln1118_13 to i6" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 80 'sext' 'sext_ln1118' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (1.78ns) (out node of the LUT)   --->   "%sub_ln1192_7 = sub i6 -12, %sext_ln1118" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 81 'sub' 'sub_ln1192_7' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_data_5_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %sub_ln1192_7, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 82 'partselect' 'tmp_data_5_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_33)   --->   "%shl_ln1118_14 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_data_V_6, i1 false)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 83 'bitconcatenate' 'shl_ln1118_14' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_33)   --->   "%sext_ln1192_25 = sext i5 %shl_ln1118_14 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 84 'sext' 'sext_ln1192_25' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (1.78ns) (out node of the LUT)   --->   "%add_ln1192_33 = add i6 -12, %sext_ln1192_25" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 85 'add' 'add_ln1192_33' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_data_6_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_33, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 86 'partselect' 'tmp_data_6_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_34)   --->   "%shl_ln1118_15 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %tmp_data_V_7, i2 0)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 87 'bitconcatenate' 'shl_ln1118_15' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (1.82ns) (out node of the LUT)   --->   "%add_ln1192_34 = add i6 -8, %shl_ln1118_15" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 88 'add' 'add_ln1192_34' <Predicate = (!icmp_ln25)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_data_7_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_34, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 89 'partselect' 'tmp_data_7_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_35)   --->   "%sext_ln1192_26 = sext i4 %tmp_data_V_8 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 90 'sext' 'sext_ln1192_26' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (1.78ns) (out node of the LUT)   --->   "%add_ln1192_35 = add i6 -16, %sext_ln1192_26" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 91 'add' 'add_ln1192_35' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_data_8_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_35, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 92 'partselect' 'tmp_data_8_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%trunc_ln1192_6 = trunc i4 %tmp_data_V_9 to i3" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 93 'trunc' 'trunc_ln1192_6' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%trunc_ln1192_7 = trunc i4 %tmp_data_V_10 to i3" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 94 'trunc' 'trunc_ln1192_7' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_38)   --->   "%sext_ln1192_29 = sext i4 %tmp_data_V_11 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 95 'sext' 'sext_ln1192_29' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (1.78ns) (out node of the LUT)   --->   "%add_ln1192_38 = add i6 -16, %sext_ln1192_29" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 96 'add' 'add_ln1192_38' <Predicate = (!icmp_ln25)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_data_11_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_38, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 97 'partselect' 'tmp_data_11_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%trunc_ln1192_8 = trunc i4 %tmp_data_V_13 to i3" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 98 'trunc' 'trunc_ln1192_8' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%trunc_ln1192_9 = trunc i4 %tmp_data_V_14 to i3" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 99 'trunc' 'trunc_ln1192_9' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node add_ln1192_42)   --->   "%shl_ln1118_18 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %tmp_data_V_15, i2 0)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 100 'bitconcatenate' 'shl_ln1118_18' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (1.82ns) (out node of the LUT)   --->   "%add_ln1192_42 = add i6 -16, %shl_ln1118_18" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 101 'add' 'add_ln1192_42' <Predicate = (!icmp_ln25)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_data_15_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_42, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 102 'partselect' 'tmp_data_15_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.49>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "%shl_ln3 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %trunc_ln1192, i3 0)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 103 'bitconcatenate' 'shl_ln3' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "%shl_ln1118_11 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_data_V_3, i1 false)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 104 'bitconcatenate' 'shl_ln1118_11' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "%sext_ln1192_23 = sext i5 %shl_ln1118_11 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 105 'sext' 'sext_ln1192_23' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 106 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1192 = sub i6 %sext_ln1192_23, %shl_ln3" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 106 'sub' 'sub_ln1192' <Predicate = (!icmp_ln25)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 107 [1/1] (3.49ns) (root node of TernaryAdder)   --->   "%add_ln1192_30 = add i6 -12, %sub_ln1192" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 107 'add' 'add_ln1192_30' <Predicate = (!icmp_ln25)> <Delay = 3.49> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 108 [1/1] (0.00ns)   --->   "%tmp_data_3_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_30, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 108 'partselect' 'tmp_data_3_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%sext_ln1192_27 = sext i4 %tmp_data_V_9 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 109 'sext' 'sext_ln1192_27' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 110 [1/1] (0.00ns)   --->   "%shl_ln1192_5 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %trunc_ln1192_6, i3 0)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 110 'bitconcatenate' 'shl_ln1192_5' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 111 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1192_8 = sub i6 %shl_ln1192_5, %sext_ln1192_27" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 111 'sub' 'sub_ln1192_8' <Predicate = (!icmp_ln25)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 112 [1/1] (3.49ns) (root node of TernaryAdder)   --->   "%add_ln1192_36 = add i6 -12, %sub_ln1192_8" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 112 'add' 'add_ln1192_36' <Predicate = (!icmp_ln25)> <Delay = 3.49> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_data_9_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_36, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 113 'partselect' 'tmp_data_9_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (0.00ns)   --->   "%sext_ln1192_28 = sext i4 %tmp_data_V_10 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 114 'sext' 'sext_ln1192_28' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%shl_ln1192_6 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %trunc_ln1192_7, i3 0)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 115 'bitconcatenate' 'shl_ln1192_6' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1192_9 = sub i6 %shl_ln1192_6, %sext_ln1192_28" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 116 'sub' 'sub_ln1192_9' <Predicate = (!icmp_ln25)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 117 [1/1] (3.49ns) (root node of TernaryAdder)   --->   "%add_ln1192_37 = add i6 -12, %sub_ln1192_9" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 117 'add' 'add_ln1192_37' <Predicate = (!icmp_ln25)> <Delay = 3.49> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_data_10_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_37, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 118 'partselect' 'tmp_data_10_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%sext_ln1192_30 = sext i4 %tmp_data_V_12 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 119 'sext' 'sext_ln1192_30' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%shl_ln1118_16 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %tmp_data_V_12, i2 0)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 120 'bitconcatenate' 'shl_ln1118_16' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 121 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1192_10 = sub i6 %shl_ln1118_16, %sext_ln1192_30" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 121 'sub' 'sub_ln1192_10' <Predicate = (!icmp_ln25)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 122 [1/1] (3.49ns) (root node of TernaryAdder)   --->   "%add_ln1192_39 = add i6 -16, %sub_ln1192_10" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 122 'add' 'add_ln1192_39' <Predicate = (!icmp_ln25)> <Delay = 3.49> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%tmp_data_12_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_39, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 123 'partselect' 'tmp_data_12_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 124 [1/1] (0.00ns)   --->   "%shl_ln1192_7 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %trunc_ln1192_8, i3 0)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 124 'bitconcatenate' 'shl_ln1192_7' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 125 [1/1] (0.00ns)   --->   "%shl_ln1118_17 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_data_V_13, i1 false)" [firmware/nnet_utils/nnet_mult.h:73->firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 125 'bitconcatenate' 'shl_ln1118_17' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 126 [1/1] (0.00ns)   --->   "%sext_ln1192_31 = sext i5 %shl_ln1118_17 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 126 'sext' 'sext_ln1192_31' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 127 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1192_11 = sub i6 %shl_ln1192_7, %sext_ln1192_31" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 127 'sub' 'sub_ln1192_11' <Predicate = (!icmp_ln25)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 128 [1/1] (3.49ns) (root node of TernaryAdder)   --->   "%add_ln1192_40 = add i6 -12, %sub_ln1192_11" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 128 'add' 'add_ln1192_40' <Predicate = (!icmp_ln25)> <Delay = 3.49> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_data_13_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_40, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 129 'partselect' 'tmp_data_13_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 130 [1/1] (0.00ns)   --->   "%sext_ln1192_32 = sext i4 %tmp_data_V_14 to i6" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 130 'sext' 'sext_ln1192_32' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 131 [1/1] (0.00ns)   --->   "%shl_ln1192_8 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %trunc_ln1192_9, i3 0)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 131 'bitconcatenate' 'shl_ln1192_8' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_4 : Operation 132 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln1192_12 = sub i6 %shl_ln1192_8, %sext_ln1192_32" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 132 'sub' 'sub_ln1192_12' <Predicate = (!icmp_ln25)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 133 [1/1] (3.49ns) (root node of TernaryAdder)   --->   "%add_ln1192_41 = add i6 -12, %sub_ln1192_12" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 133 'add' 'add_ln1192_41' <Predicate = (!icmp_ln25)> <Delay = 3.49> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.74> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_data_14_V = call i4 @_ssdm_op_PartSelect.i4.i6.i32.i32(i6 %add_ln1192_41, i32 2, i32 5)" [firmware/nnet_utils/nnet_batchnorm_stream.h:42]   --->   Operation 134 'partselect' 'tmp_data_14_V' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.18>
+ST_5 : Operation 135 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str69) nounwind" [firmware/nnet_utils/nnet_batchnorm_stream.h:25]   --->   Operation 135 'specloopname' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str69)" [firmware/nnet_utils/nnet_batchnorm_stream.h:25]   --->   Operation 136 'specregionbegin' 'tmp' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_5 : Operation 137 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str35) nounwind" [firmware/nnet_utils/nnet_batchnorm_stream.h:26]   --->   Operation 137 'specpipeline' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_5 : Operation 138 [1/1] (2.18ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P.i4P(i4* %res_V_data_0_V, i4* %res_V_data_1_V, i4* %res_V_data_2_V, i4* %res_V_data_3_V, i4* %res_V_data_4_V, i4* %res_V_data_5_V, i4* %res_V_data_6_V, i4* %res_V_data_7_V, i4* %res_V_data_8_V, i4* %res_V_data_9_V, i4* %res_V_data_10_V, i4* %res_V_data_11_V, i4* %res_V_data_12_V, i4* %res_V_data_13_V, i4* %res_V_data_14_V, i4* %res_V_data_15_V, i4 %tmp_data_0_V, i4 %tmp_data_1_V, i4 %tmp_data_2_V, i4 %tmp_data_3_V, i4 %tmp_data_4_V, i4 %tmp_data_5_V, i4 %tmp_data_6_V, i4 %tmp_data_7_V, i4 %tmp_data_8_V, i4 %tmp_data_9_V, i4 %tmp_data_10_V, i4 %tmp_data_11_V, i4 %tmp_data_12_V, i4 %tmp_data_13_V, i4 %tmp_data_14_V, i4 %tmp_data_15_V)" [firmware/nnet_utils/nnet_batchnorm_stream.h:46]   --->   Operation 138 'write' <Predicate = (!icmp_ln25)> <Delay = 2.18> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 4> <Depth = 3> <FIFO>
+ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%empty_130 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str69, i32 %tmp)" [firmware/nnet_utils/nnet_batchnorm_stream.h:47]   --->   Operation 139 'specregionend' 'empty_130' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "br label %1" [firmware/nnet_utils/nnet_batchnorm_stream.h:25]   --->   Operation 140 'br' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+
+State 6 <SV = 2> <Delay = 0.00>
+ST_6 : Operation 141 [1/1] (0.00ns)   --->   "ret void" [firmware/nnet_utils/nnet_batchnorm_stream.h:48]   --->   Operation 141 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', firmware/nnet_utils/nnet_batchnorm_stream.h:25) [68]  (1.77 ns)
+
+ <State 2>: 1.88ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', firmware/nnet_utils/nnet_batchnorm_stream.h:25) [68]  (0 ns)
+	'icmp' operation ('icmp_ln25', firmware/nnet_utils/nnet_batchnorm_stream.h:25) [69]  (1.88 ns)
+
+ <State 3>: 4.01ns
+The critical path consists of the following:
+	fifo read on port 'data_V_data_0_V' (firmware/nnet_utils/nnet_batchnorm_stream.h:28) [77]  (2.19 ns)
+	'add' operation ('add_ln1192_34', firmware/nnet_utils/nnet_batchnorm_stream.h:42) [125]  (1.83 ns)
+
+ <State 4>: 3.49ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln1192', firmware/nnet_utils/nnet_batchnorm_stream.h:42) [109]  (0 ns)
+	'add' operation ('add_ln1192_30', firmware/nnet_utils/nnet_batchnorm_stream.h:42) [110]  (3.49 ns)
+
+ <State 5>: 2.19ns
+The critical path consists of the following:
+	fifo write on port 'res_V_data_0_V' (firmware/nnet_utils/nnet_batchnorm_stream.h:46) [166]  (2.19 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
