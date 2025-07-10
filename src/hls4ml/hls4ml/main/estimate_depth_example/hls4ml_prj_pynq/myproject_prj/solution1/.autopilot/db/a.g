@@ -1,4 +1,0 @@
-#!/bin/sh
-lli=${LLVMINTERP-lli}
-exec $lli \
-    /home/jeanleo2/hls4ml2/estimate_depth_example/hls4ml_prj_pynq/myproject_prj/solution1/.autopilot/db/a.g.bc ${1+"$@"}
