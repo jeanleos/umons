@@ -1,6 +1,3 @@
-//#include <ap_int.h>
-//#include <hls_stream.h>
-
 #define MAXVALUE 3
 
 void sum(int mat[MAXVALUE*MAXVALUE], int *res) {
