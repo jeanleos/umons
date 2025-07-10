@@ -1,3 +1,33 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+train.py
+This script implements a U-Net architecture depth estimation model using Keras and QKeras for quantised layers.
+It loads the DIODE dataset that contains the RGB images and their corresponding depth maps, prepares the data generators and finally defines a quantised U-Net model,
+trains the model, saves it, and visualizes predictions and training history.
+Modules:
+    - tensorflow, keras: For deep learning model definition and training.
+    - qkeras: For quantized layers in the U-Net architecture.
+    - numpy, pandas: For data manipulation and processing.
+    - matplotlib: For visualization of predictions and training history.
+    - os: For file and directory operations.
+Classes:
+    DIODE: Keras Sequence-based data generator for loading and preprocessing images and depth maps.
+Functions:
+    unet_model(input_shape): Builds and returns a quantized U-Net model for depth estimation.
+    visualize_predictions(model, data_gen): Visualizes input images, ground truth, and predicted depth maps.
+Workflow:
+    1. Loads and shuffles the dataset of images, depth maps, and masks.
+    2. Splits the data into training and validation sets.
+    3. Prepares data generators for efficient batch loading.
+    4. Defines a U-Net model with quantized convolutional layers.
+    5. Compiles and trains the model with early stopping.
+    6. Saves the trained model.
+    7. Visualizes predictions and training/validation loss and MAE curves.
+Usage:
+    Run this script to train a quantized U-Net model for depth estimation on the specified dataset.
+"""
+
 import tensorflow as tf
 from tensorflow.keras import layers, models
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -9,17 +39,18 @@ import qkeras
 from qkeras import QDense, QConv2D, QActivation, QBatchNormalization
 from qkeras.utils import model_quantize
 
-# paths
-root = os.getcwd()#"/home/nouhaila/workspace/FINN_depth_estimation"
+# Change the directory to the location of the dataset
+root = os.getcwd()
 folder = "val"
 path = os.path.join(root, folder, "outdoor")
 
-# load dataset
+# Load dataset
 filelist = []
 for root, dirs, files in os.walk(path):
     for file in files:
         filelist.append(os.path.join(root, file))
 
+# Filter and sort the file list
 filelist.sort()
 data = {
     "image": [x for x in filelist if x.endswith(".png")],
@@ -29,7 +60,8 @@ data = {
 df = pd.DataFrame(data)
 df = df.sample(frac=1, random_state=42)
 
-# data generator
+# Data generator for DIODE dataset
+# This class allows to load images and depth maps in batches for training the model
 class DIODE(tf.keras.utils.Sequence):
     def __init__(self, df, batch_size=32, image_size=(256, 256)):
         self.df = df
@@ -45,34 +77,34 @@ class DIODE(tf.keras.utils.Sequence):
         depths = []
         
         for _, row in batch_df.iterrows():
-            # Charger et redimensionner l'image à la taille spécifiée
+            # Load and preprocess the image
             img = tf.keras.preprocessing.image.load_img(row['image'], target_size=self.image_size)
             img = tf.keras.preprocessing.image.img_to_array(img) / 255.0
             
-            # Charger et préparer les données de profondeur
+            #  Load and preprocess the depth map
             depth = np.load(row['depth']).astype(np.float32).squeeze()
             depth_mask = np.load(row['mask_']).astype(np.float32).squeeze()
 
-            # Normaliser la profondeur
+            # Apply the mask to the depth map
             depth[depth_mask == 0] = np.mean(depth)
             depth = (depth - 0.3) / (30.0 - 0.3)
             depth = np.clip(depth, 0.0, 1.0)
             
-            # Redimensionner les données de profondeur à la même taille que l'image d'entrée
+            # Resize the image and depth map to the target size
             depth = tf.image.resize(np.expand_dims(depth, axis=-1), self.image_size).numpy().squeeze()
 
             images.append(img)
-            depths.append(np.expand_dims(depth, axis=-1))  # Ajouter une dimension de canal
+            depths.append(np.expand_dims(depth, axis=-1))
 
         return np.array(images), np.array(depths)
 
-# define UNet model with QKeras
+# Define UNet model with QKeras
 def unet_model(input_shape=(256, 256, 3)):
     inputs = layers.Input(shape=input_shape)
     
-    # encoder
+    # Encoder
     c1 = QConv2D(32, kernel_size=(3, 3), padding='same', activation='relu')(inputs)
-    c1 = layers.BatchNormalization()(c1)  # Using regular BatchNormalization instead of QBatchNormalization
+    c1 = layers.BatchNormalization()(c1)
     c1 = QConv2D(32, kernel_size=(3, 3), padding='same', activation='relu')(c1)
     c1 = layers.BatchNormalization()(c1)
     p1 = layers.MaxPooling2D((2, 2))(c1)
@@ -89,13 +121,13 @@ def unet_model(input_shape=(256, 256, 3)):
     c3 = layers.BatchNormalization()(c3)
     p3 = layers.MaxPooling2D((2, 2))(c3)
 
-    # bottleneck
+    # Bottleneck
     c4 = QConv2D(256, kernel_size=(3, 3), padding='same', activation='relu')(p3)
     c4 = layers.BatchNormalization()(c4)
     c4 = QConv2D(256, kernel_size=(3, 3), padding='same', activation='relu')(c4)
     c4 = layers.BatchNormalization()(c4)
 
-    # decoder
+    # Decoder
     u5 = layers.Conv2DTranspose(128, (2, 2), strides=(2, 2), padding='same')(c4)
     u5 = layers.concatenate([u5, c3])
     c5 = QConv2D(128, kernel_size=(3, 3), padding='same', activation='relu')(u5)
@@ -122,28 +154,28 @@ def unet_model(input_shape=(256, 256, 3)):
     model = models.Model(inputs=inputs, outputs=outputs)
     return model
 
-# compile model
+# Compile model
 model = unet_model(input_shape=(256, 256, 3))
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 
-# Afficher le résumé du modèle pour vérifier les dimensions
+# Show model summary
 model.summary()
 
-# create data generators
+# Create data generators
 train_df = df[:int(len(df) * 0.7)]
 val_df = df[int(len(df) * 0.7):]
 
-train_gen = DIODE(train_df, batch_size=8)  # Réduire la taille du batch pour éviter les problèmes de mémoire
+train_gen = DIODE(train_df, batch_size=8)
 val_gen = DIODE(val_df, batch_size=8)
 
-# train model
+# Train model
 history = model.fit(train_gen, validation_data=val_gen, epochs=100, 
                     callbacks=[tf.keras.callbacks.EarlyStopping(patience=10, restore_best_weights=True)])
 
-# save model
+# Save model
 model.save('depth_estimation_model.h5')
 
-# prediction and visualization
+# Prediction and visualisation
 def visualize_predictions(model, data_gen):
     images, depths = data_gen[0]
     preds = model.predict(images)
@@ -159,7 +191,7 @@ def visualize_predictions(model, data_gen):
 
 visualize_predictions(model, val_gen)
 
-# Visualiser l'historique d'entraînement
+# Plot training history
 plt.figure(figsize=(12, 5))
 plt.subplot(1, 2, 1)
 plt.plot(history.history['loss'])
