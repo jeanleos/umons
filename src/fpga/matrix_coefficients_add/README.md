@@ -11,3 +11,11 @@ The available files are given as:
 - sum.hwh: The Hardware Handoff file.
 
 We also provide the *project_1* folder that was used for Vivado, and *sum* folder which is the folder used by Vitis.
+
+Example of the code in Vitis 2024.2:
+
+![Screenshot of Vitis 2024.2 with the C++ description open](/img/matrix_coefficients_add/Screenshot from 2025-06-18 14-21-20.png)
+
+Example of the Vivado 2024.2 design: 
+
+![Screenshot of the Vivado 2024.2 design](/img/matrix_coefficients_add/Screenshot from 2025-06-18 14-22-43.png)
