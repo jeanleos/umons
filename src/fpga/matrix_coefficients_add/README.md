@@ -1,0 +1,11 @@
+# Matrix coefficients sum
+
+In this example, we attempt to synthetise and implement an IP core that inputs a 3 by 3 matrix and sums its coefficients. 
+For this project, the reader must use Vitis and Vivado 2024.2.
+
+The available files are given as:
+- coef_add.cpp: The C++ hardware description which should be imported into Vitis 2024.2 to synthetise and package.
+- coef_add.h: The C++ header file for coef_add.cpp.
+- coefficients_sum.ipynb: The Jupyter Notebook file that should be run on the Pynq-Z2.
+- sum.bit: The Bitstream file for the Pynq-Z2 FPGA.
+- sum.hwh: The Hardware Handoff file.
