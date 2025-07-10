@@ -4,6 +4,10 @@ Work placement SEMi UMons Depth Estimation
 
 In this repository, we guide the reader through each step of learning the FPGA toolchain, create deep learning models and use hls4ml for a deployment on the Pynq-Z2 FPGA board.
 
+The goal is to deploy a depth estimation model on a FPGA board using hls4ml.
+
+![Estimation](/img/hls4ml/comparisonREAL.png)
+
 ## Requirements
 
 To run all the parts, it is necessary to have the followings:
