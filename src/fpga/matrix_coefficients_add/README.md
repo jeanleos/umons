@@ -9,3 +9,5 @@ The available files are given as:
 - coefficients_sum.ipynb: The Jupyter Notebook file that should be run on the Pynq-Z2.
 - sum.bit: The Bitstream file for the Pynq-Z2 FPGA.
 - sum.hwh: The Hardware Handoff file.
+
+We also provide the *project_1* folder that was used for Vivado, and *sum* folder which is the folder used by Vitis.
