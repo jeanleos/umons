@@ -1,23 +1,25 @@
 # Monocular distance for depth estimation
 
-Work placement SEMi UMons Depth Estimation
+Repository of the accomplished work during the 2025 work placement at Université de Mons. 
+
+## What is it about?
+
+During this work placement, our goal is to create a depth estimation model that can fit on the Pynq-Z2 FPGA board using hls4ml.
 
 In this repository, we guide the reader through each step of learning the FPGA toolchain, create deep learning models and use hls4ml for a deployment on the Pynq-Z2 FPGA board.
-
-The goal is to deploy a depth estimation model on a FPGA board using hls4ml.
 
 ![Estimation](/img/hls4ml/comparisonREAL.png)
 
 ## Requirements
 
 To run all the parts, it is necessary to have the followings:
-- Vitis and Vivado `2020.1`
-- Vitis and Vivado `2024.2`
-- `hls4ml` and `hls4ml-tutorial` available [here](https://github.com/fastmachinelearning/hls4ml-tutorial).
-- Tensorflow and Keras
-- QKeras
+- Vitis and Vivado `2020.1` for hls4ml
+- Vitis and Vivado `2024.2` for coefficients sum and RGB to YUV projects 
+- `hls4ml` and `hls4ml-tutorial` available [here](https://github.com/fastmachinelearning/hls4ml-tutorial) for the model conversion to HLS
+- Tensorflow and Keras for creating deep learning models
+- QKeras for quantised versions of the models
 - A Pynq-Z2 FPGA board
-- The DIODE dataset, including the training and validation data
+- The DIODE dataset, including the training and validation data, available [here](https://diode-dataset.org/)
 - Anaconda
 
 ## Steps
