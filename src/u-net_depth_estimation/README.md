@@ -4,7 +4,7 @@ Here we create a model for depth estimation prediction based on the U-Net archit
 
 It is necessary to download the [DIODE dataset](https://diode-dataset.org/) to train the model. Please download the validation "val" dataset and place it in this folder. For a better accuracy it would be better to use the training data.
 
-## Manual
+## Instructions to use
 
 To train the model:
 
