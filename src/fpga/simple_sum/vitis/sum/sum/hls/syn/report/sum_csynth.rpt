@@ -1,0 +1,130 @@
+
+
+================================================================
+== Vitis HLS Report for 'sum'
+================================================================
+* Date:           Tue Jul 15 15:39:14 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        sum
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.552 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     39|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|     150|    232|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     150|    271|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------+----------------+---------+----+-----+-----+-----+
+    |     Instance     |     Module     | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------+----------------+---------+----+-----+-----+-----+
+    |CTRL_BUS_s_axi_U  |CTRL_BUS_s_axi  |        0|   0|  150|  232|    0|
+    +------------------+----------------+---------+----+-----+-----+-----+
+    |Total             |                |        0|   0|  150|  232|    0|
+    +------------------+----------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------+----------+----+---+----+------------+------------+
+    | Variable Name| Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+----+---+----+------------+------------+
+    |c             |         +|   0|  0|  39|          32|          32|
+    +--------------+----------+----+---+----+------------+------------+
+    |Total         |          |   0|  0|  39|          32|          32|
+    +--------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_CTRL_BUS_AWVALID  |   in|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_AWREADY  |  out|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_AWADDR   |   in|    6|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_WVALID   |   in|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_WREADY   |  out|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_WDATA    |   in|   32|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_WSTRB    |   in|    4|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_ARVALID  |   in|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_ARREADY  |  out|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_ARADDR   |   in|    6|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_RVALID   |  out|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_RREADY   |   in|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_RDATA    |  out|   32|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_RRESP    |  out|    2|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_BVALID   |  out|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_BREADY   |   in|    1|       s_axi|      CTRL_BUS|       pointer|
+|s_axi_CTRL_BUS_BRESP    |  out|    2|       s_axi|      CTRL_BUS|       pointer|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|           sum|  return value|
+|ap_rst_n                |   in|    1|  ap_ctrl_hs|           sum|  return value|
+|interrupt               |  out|    1|  ap_ctrl_hs|           sum|  return value|
++------------------------+-----+-----+------------+--------------+--------------+
+

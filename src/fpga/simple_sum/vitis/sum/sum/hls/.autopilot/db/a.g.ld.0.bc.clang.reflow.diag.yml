@@ -1,0 +1,11 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_sum_ir
+Args:            
+  - Callee:          'sum(int, int, int*)'
+    DebugLoc:        { File: Untitled.cpp, Line: 1, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_sum_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...

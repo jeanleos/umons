@@ -1,0 +1,3 @@
+relativeroot=/home/jeanleo2/sums/vitis/sum
+original_argv=--mode hls --package --config /home/jeanleo2/sums/vitis/sum/hls_config.cfg --work_dir sum 
+
