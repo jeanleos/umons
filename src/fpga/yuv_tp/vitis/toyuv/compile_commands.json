@@ -1,0 +1,15 @@
+[
+  {
+    "directory": "/home/jeanleo2/yuv_tp/vitis/toyuv",
+    "arguments": [
+      "/tools/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/tools/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=toyuv",
+      "-c",
+      "/home/jeanleo2/yuv_tp/toyuv.cpp"
+    ],
+    "file": "/home/jeanleo2/yuv_tp/toyuv.cpp"
+  }
+]

@@ -1,0 +1,33 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=torgb" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=ch_y" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=ch_u" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=ch_v" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=ch_r" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=ch_g" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=ch_b" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=width bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=height bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/jeanleo2/yuv_tp/torgb.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="torgb" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

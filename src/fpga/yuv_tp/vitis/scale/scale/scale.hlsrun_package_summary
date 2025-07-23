@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "/home/jeanleo2/yuv_tp/vitis/scale/scale/scale.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jul 23 15:31:27 2025",
+ "timestampMillis": "1753277487062",
+ "buildStep": {
+  "cmdId": "ca140519-d384-41c5-8908-880b7054b98a",
+  "name": "vitis-run",
+  "logFile": "/home/jeanleo2/yuv_tp/vitis/scale/scale/logs/scale.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --package --config /home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg --work_dir scale ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "/home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg",
+   "--work_dir",
+   "scale"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/jeanleo2/yuv_tp/vitis/scale"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:27 2025",
+ "timestampMillis": "1753277487062",
+ "status": {
+  "cmdId": "ca140519-d384-41c5-8908-880b7054b98a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Jul 23 15:31:29 2025",
+ "timestampMillis": "1753277489999",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "scale",
+     "file": "/home/jeanleo2/yuv_tp/vitis/scale/scale/scale.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/jeanleo2/yuv_tp/scale.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 23 15:31:29 2025",
+ "timestampMillis": "1753277489999",
+ "buildStep": {
+  "cmdId": "e0362223-f878-412f-809a-4a9b330c9239",
+  "name": "",
+  "logFile": "/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/jeanleo2/yuv_tp/vitis/scale"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:30 2025",
+ "timestampMillis": "1753277490000",
+ "status": {
+  "cmdId": "e0362223-f878-412f-809a-4a9b330c9239",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:45 2025",
+ "timestampMillis": "1753277505389",
+ "status": {
+  "cmdId": "e0362223-f878-412f-809a-4a9b330c9239",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:45 2025",
+ "timestampMillis": "1753277505500",
+ "status": {
+  "cmdId": "ca140519-d384-41c5-8908-880b7054b98a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:45 2025",
+ "timestampMillis": "1753277505500",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:45 2025",
+ "timestampMillis": "1753277505500",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

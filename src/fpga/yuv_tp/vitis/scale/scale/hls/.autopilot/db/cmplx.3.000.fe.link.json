@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "scale.cpp",
+    "fileloc": 9,
+    "instructions": 40,
+    "loads": {
+      "L": 1
+    },
+    "name": "scale",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 175
+  }
+}

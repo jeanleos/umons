@@ -1,0 +1,25 @@
+<pragmas>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="13" pragmaType="interface" parentfunction="torgb" mode="axis" port="ch_y" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="14" pragmaType="interface" parentfunction="torgb" mode="axis" port="ch_u" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="15" pragmaType="interface" parentfunction="torgb" mode="axis" port="ch_v" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="16" pragmaType="interface" parentfunction="torgb" mode="axis" port="ch_r" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="17" pragmaType="interface" parentfunction="torgb" mode="axis" port="ch_g" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="18" pragmaType="interface" parentfunction="torgb" mode="axis" port="ch_b" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="19" pragmaType="interface" parentfunction="torgb" mode="s_axilite" port="width" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="20" pragmaType="interface" parentfunction="torgb" mode="s_axilite" port="height" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/jeanleo2/yuv_tp/torgb.cpp" line="21" pragmaType="interface" parentfunction="torgb" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+</pragmas>

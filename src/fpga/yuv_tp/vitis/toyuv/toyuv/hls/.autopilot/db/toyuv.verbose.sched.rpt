@@ -1,0 +1,212 @@
+
+
+================================================================
+== Vitis HLS Report for 'toyuv'
+================================================================
+* Date:           Wed Jul 23 15:31:29 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        toyuv
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.923 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %height" [/home/jeanleo2/yuv_tp/toyuv.cpp:9]   --->   Operation 7 'read' 'height_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 8 [1/1] (1.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %width" [/home/jeanleo2/yuv_tp/toyuv.cpp:9]   --->   Operation 8 'read' 'width_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 2 <SV = 1> <Delay = 6.91>
+ST_2 : Operation 9 [2/2] (6.91ns)   --->   "%total = mul i32 %height_read, i32 %width_read" [/home/jeanleo2/yuv_tp/toyuv.cpp:23]   --->   Operation 9 'mul' 'total' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.91>
+ST_3 : Operation 10 [1/2] (6.91ns)   --->   "%total = mul i32 %height_read, i32 %width_read" [/home/jeanleo2/yuv_tp/toyuv.cpp:23]   --->   Operation 10 'mul' 'total' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.88>
+ST_4 : Operation 11 [2/2] (4.88ns)   --->   "%call_ln23 = call void @toyuv_Pipeline_VITIS_LOOP_24_1, i32 %total, i32 %ch_r_V_data_V, i4 %ch_r_V_keep_V, i4 %ch_r_V_strb_V, i2 %ch_r_V_user_V, i1 %ch_r_V_last_V, i5 %ch_r_V_id_V, i6 %ch_r_V_dest_V, i32 %ch_g_V_data_V, i4 %ch_g_V_keep_V, i4 %ch_g_V_strb_V, i2 %ch_g_V_user_V, i1 %ch_g_V_last_V, i5 %ch_g_V_id_V, i6 %ch_g_V_dest_V, i32 %ch_b_V_data_V, i4 %ch_b_V_keep_V, i4 %ch_b_V_strb_V, i2 %ch_b_V_user_V, i1 %ch_b_V_last_V, i5 %ch_b_V_id_V, i6 %ch_b_V_dest_V, i32 %ch_y_V_data_V, i4 %ch_y_V_keep_V, i4 %ch_y_V_strb_V, i2 %ch_y_V_user_V, i1 %ch_y_V_last_V, i5 %ch_y_V_id_V, i6 %ch_y_V_dest_V, i32 %ch_u_V_data_V, i4 %ch_u_V_keep_V, i4 %ch_u_V_strb_V, i2 %ch_u_V_user_V, i1 %ch_u_V_last_V, i5 %ch_u_V_id_V, i6 %ch_u_V_dest_V, i32 %ch_v_V_data_V, i4 %ch_v_V_keep_V, i4 %ch_v_V_strb_V, i2 %ch_v_V_user_V, i1 %ch_v_V_last_V, i5 %ch_v_V_id_V, i6 %ch_v_V_dest_V" [/home/jeanleo2/yuv_tp/toyuv.cpp:23]   --->   Operation 11 'call' 'call_ln23' <Predicate = true> <Delay = 4.88> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 12 [1/2] (0.00ns)   --->   "%call_ln23 = call void @toyuv_Pipeline_VITIS_LOOP_24_1, i32 %total, i32 %ch_r_V_data_V, i4 %ch_r_V_keep_V, i4 %ch_r_V_strb_V, i2 %ch_r_V_user_V, i1 %ch_r_V_last_V, i5 %ch_r_V_id_V, i6 %ch_r_V_dest_V, i32 %ch_g_V_data_V, i4 %ch_g_V_keep_V, i4 %ch_g_V_strb_V, i2 %ch_g_V_user_V, i1 %ch_g_V_last_V, i5 %ch_g_V_id_V, i6 %ch_g_V_dest_V, i32 %ch_b_V_data_V, i4 %ch_b_V_keep_V, i4 %ch_b_V_strb_V, i2 %ch_b_V_user_V, i1 %ch_b_V_last_V, i5 %ch_b_V_id_V, i6 %ch_b_V_dest_V, i32 %ch_y_V_data_V, i4 %ch_y_V_keep_V, i4 %ch_y_V_strb_V, i2 %ch_y_V_user_V, i1 %ch_y_V_last_V, i5 %ch_y_V_id_V, i6 %ch_y_V_dest_V, i32 %ch_u_V_data_V, i4 %ch_u_V_keep_V, i4 %ch_u_V_strb_V, i2 %ch_u_V_user_V, i1 %ch_u_V_last_V, i5 %ch_u_V_id_V, i6 %ch_u_V_dest_V, i32 %ch_v_V_data_V, i4 %ch_v_V_keep_V, i4 %ch_v_V_strb_V, i2 %ch_v_V_user_V, i1 %ch_v_V_last_V, i5 %ch_v_V_id_V, i6 %ch_v_V_dest_V" [/home/jeanleo2/yuv_tp/toyuv.cpp:23]   --->   Operation 12 'call' 'call_ln23' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 0"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%spectopmodule_ln9 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_0" [/home/jeanleo2/yuv_tp/toyuv.cpp:9]   --->   Operation 14 'spectopmodule' 'spectopmodule_ln9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %width"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %width, void @empty_2, i32 4294967295, i32 4294967295, void @empty_3, i32 0, i32 0, void @empty_4, void @empty_5, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %width, void @empty, i32 4294967295, i32 4294967295, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %height"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %height, void @empty_2, i32 4294967295, i32 4294967295, void @empty_3, i32 0, i32 0, void @empty_4, void @empty_1, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %height, void @empty, i32 4294967295, i32 4294967295, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch_r_V_data_V, i4 %ch_r_V_keep_V, i4 %ch_r_V_strb_V, i2 %ch_r_V_user_V, i1 %ch_r_V_last_V, i5 %ch_r_V_id_V, i6 %ch_r_V_dest_V, void @empty_8, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ch_r_V_data_V"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_r_V_keep_V"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_r_V_strb_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %ch_r_V_user_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %ch_r_V_last_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ch_r_V_id_V"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %ch_r_V_dest_V"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch_g_V_data_V, i4 %ch_g_V_keep_V, i4 %ch_g_V_strb_V, i2 %ch_g_V_user_V, i1 %ch_g_V_last_V, i5 %ch_g_V_id_V, i6 %ch_g_V_dest_V, void @empty_8, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ch_g_V_data_V"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_g_V_keep_V"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_g_V_strb_V"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %ch_g_V_user_V"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %ch_g_V_last_V"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ch_g_V_id_V"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %ch_g_V_dest_V"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch_b_V_data_V, i4 %ch_b_V_keep_V, i4 %ch_b_V_strb_V, i2 %ch_b_V_user_V, i1 %ch_b_V_last_V, i5 %ch_b_V_id_V, i6 %ch_b_V_dest_V, void @empty_8, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ch_b_V_data_V"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_b_V_keep_V"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_b_V_strb_V"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %ch_b_V_user_V"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %ch_b_V_last_V"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ch_b_V_id_V"   --->   Operation 43 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %ch_b_V_dest_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch_y_V_data_V, i4 %ch_y_V_keep_V, i4 %ch_y_V_strb_V, i2 %ch_y_V_user_V, i1 %ch_y_V_last_V, i5 %ch_y_V_id_V, i6 %ch_y_V_dest_V, void @empty_8, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ch_y_V_data_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_y_V_keep_V"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_y_V_strb_V"   --->   Operation 48 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %ch_y_V_user_V"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %ch_y_V_last_V"   --->   Operation 50 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ch_y_V_id_V"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %ch_y_V_dest_V"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch_u_V_data_V, i4 %ch_u_V_keep_V, i4 %ch_u_V_strb_V, i2 %ch_u_V_user_V, i1 %ch_u_V_last_V, i5 %ch_u_V_id_V, i6 %ch_u_V_dest_V, void @empty_8, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ch_u_V_data_V"   --->   Operation 54 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_u_V_keep_V"   --->   Operation 55 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_u_V_strb_V"   --->   Operation 56 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %ch_u_V_user_V"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %ch_u_V_last_V"   --->   Operation 58 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ch_u_V_id_V"   --->   Operation 59 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %ch_u_V_dest_V"   --->   Operation 60 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch_v_V_data_V, i4 %ch_v_V_keep_V, i4 %ch_v_V_strb_V, i2 %ch_v_V_user_V, i1 %ch_v_V_last_V, i5 %ch_v_V_id_V, i6 %ch_v_V_dest_V, void @empty_8, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ch_v_V_data_V"   --->   Operation 62 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_v_V_keep_V"   --->   Operation 63 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %ch_v_V_strb_V"   --->   Operation 64 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %ch_v_V_user_V"   --->   Operation 65 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %ch_v_V_last_V"   --->   Operation 66 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ch_v_V_id_V"   --->   Operation 67 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %ch_v_V_dest_V"   --->   Operation 68 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_4, void @empty_11, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln24 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_y_V_data_V, i4 %ch_y_V_keep_V, i4 %ch_y_V_strb_V, i2 %ch_y_V_user_V, i1 %ch_y_V_last_V, i5 %ch_y_V_id_V, i6 %ch_y_V_dest_V, void @empty_12" [/home/jeanleo2/yuv_tp/toyuv.cpp:24]   --->   Operation 70 'specaxissidechannel' 'specaxissidechannel_ln24' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 71 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln24 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_u_V_data_V, i4 %ch_u_V_keep_V, i4 %ch_u_V_strb_V, i2 %ch_u_V_user_V, i1 %ch_u_V_last_V, i5 %ch_u_V_id_V, i6 %ch_u_V_dest_V, void @empty_13" [/home/jeanleo2/yuv_tp/toyuv.cpp:24]   --->   Operation 71 'specaxissidechannel' 'specaxissidechannel_ln24' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln24 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_v_V_data_V, i4 %ch_v_V_keep_V, i4 %ch_v_V_strb_V, i2 %ch_v_V_user_V, i1 %ch_v_V_last_V, i5 %ch_v_V_id_V, i6 %ch_v_V_dest_V, void @empty_14" [/home/jeanleo2/yuv_tp/toyuv.cpp:24]   --->   Operation 72 'specaxissidechannel' 'specaxissidechannel_ln24' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 73 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln24 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_g_V_data_V, i4 %ch_g_V_keep_V, i4 %ch_g_V_strb_V, i2 %ch_g_V_user_V, i1 %ch_g_V_last_V, i5 %ch_g_V_id_V, i6 %ch_g_V_dest_V, void @empty_15" [/home/jeanleo2/yuv_tp/toyuv.cpp:24]   --->   Operation 73 'specaxissidechannel' 'specaxissidechannel_ln24' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln24 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_b_V_data_V, i4 %ch_b_V_keep_V, i4 %ch_b_V_strb_V, i2 %ch_b_V_user_V, i1 %ch_b_V_last_V, i5 %ch_b_V_id_V, i6 %ch_b_V_dest_V, void @empty_7" [/home/jeanleo2/yuv_tp/toyuv.cpp:24]   --->   Operation 74 'specaxissidechannel' 'specaxissidechannel_ln24' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln24 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_r_V_data_V, i4 %ch_r_V_keep_V, i4 %ch_r_V_strb_V, i2 %ch_r_V_user_V, i1 %ch_r_V_last_V, i5 %ch_r_V_id_V, i6 %ch_r_V_dest_V, void @empty_9" [/home/jeanleo2/yuv_tp/toyuv.cpp:24]   --->   Operation 75 'specaxissidechannel' 'specaxissidechannel_ln24' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%ret_ln49 = ret i32 0" [/home/jeanleo2/yuv_tp/toyuv.cpp:49]   --->   Operation 76 'ret' 'ret_ln49' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('height_read', /home/jeanleo2/yuv_tp/toyuv.cpp:9) on port 'height' (/home/jeanleo2/yuv_tp/toyuv.cpp:9) [102]  (1.000 ns)
+
+ <State 2>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('total', /home/jeanleo2/yuv_tp/toyuv.cpp:23) [104]  (6.912 ns)
+
+ <State 3>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('total', /home/jeanleo2/yuv_tp/toyuv.cpp:23) [104]  (6.912 ns)
+
+ <State 4>: 4.889ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln23', /home/jeanleo2/yuv_tp/toyuv.cpp:23) to 'toyuv_Pipeline_VITIS_LOOP_24_1' [111]  (4.889 ns)
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

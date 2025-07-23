@@ -1,0 +1,173 @@
+
+
+================================================================
+== Synthesis Summary Report of 'toyuv'
+================================================================
++ General Information: 
+    * Date:           Wed Jul 23 15:31:29 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        toyuv
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----------+-----------+-----------+-----+
+    |              Modules              | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |          |           |           |     |
+    |              & Loops              | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF    |    LUT    | URAM|
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----------+-----------+-----------+-----+
+    |+ toyuv                            |     -|  0.38|        -|       -|         -|        -|     -|        no|     -|  23 (10%)|  4369 (4%)|  3106 (5%)|    -|
+    | + toyuv_Pipeline_VITIS_LOOP_24_1  |     -|  0.38|        -|       -|         -|        -|     -|        no|     -|   20 (9%)|  3795 (3%)|  2563 (4%)|    -|
+    |  o VITIS_LOOP_24_1                |     -|  7.30|        -|       -|         9|        1|     -|       yes|     -|         -|          -|          -|    -|
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 24     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | ap_return | 0x10   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_control | width     | 0x18   | 32    | W      | Data signal of width             |                                                                      |
+| s_axi_control | height    | 0x20   | 32    | W      | Data signal of height            |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| ch_b      | in        | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| ch_g      | in        | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| ch_r      | in        | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| ch_u      | out       | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| ch_v      | out       | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| ch_y      | out       | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------------------+
+| Argument | Direction | Datatype                                               |
++----------+-----------+--------------------------------------------------------+
+| width    | in        | int                                                    |
+| height   | in        | int                                                    |
+| ch_r     | in        | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| ch_g     | in        | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| ch_b     | in        | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| ch_y     | out       | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| ch_u     | out       | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| ch_v     | out       | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| return   | out       | int                                                    |
++----------+-----------+--------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                             |
++----------+---------------+-----------+-------------------------------------+
+| width    | s_axi_control | register  | name=width offset=0x18 range=32     |
+| height   | s_axi_control | register  | name=height offset=0x20 range=32    |
+| ch_r     | ch_r          | interface |                                     |
+| ch_g     | ch_g          | interface |                                     |
+| ch_b     | ch_b          | interface |                                     |
+| ch_y     | ch_y          | interface |                                     |
+| ch_u     | ch_u          | interface |                                     |
+| ch_v     | ch_v          | interface |                                     |
+| return   | s_axi_control | register  | name=ap_return offset=0x10 range=32 |
++----------+---------------+-----------+-------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------+-----+--------+-------------+--------+----------+---------+
+| Name                              | DSP | Pragma | Variable    | Op     | Impl     | Latency |
++-----------------------------------+-----+--------+-------------+--------+----------+---------+
+| + toyuv                           | 23  |        |             |        |          |         |
+|   mul_32s_32s_32_2_1_U55          | 3   |        | total       | mul    | auto     | 1       |
+|  + toyuv_Pipeline_VITIS_LOOP_24_1 | 20  |        |             |        |          |         |
+|    icmp_ln24_fu_372_p2            |     |        | icmp_ln24   | setlt  | auto     | 0       |
+|    add_ln24_fu_378_p2             |     |        | add_ln24    | add    | fabric   | 0       |
+|    mul_32s_34ns_65_2_1_U1         | 4   |        | mul_ln36    | mul    | auto     | 1       |
+|    sub_ln36_fu_838_p2             |     |        | sub_ln36    | sub    | fabric   | 0       |
+|    select_ln36_fu_862_p3          |     |        | select_ln36 | select | auto_sel | 0       |
+|    sub_ln36_1_fu_873_p2           |     |        | sub_ln36_1  | sub    | fabric   | 0       |
+|    y_fu_879_p3                    |     |        | y           | select | auto_sel | 0       |
+|    mul_32s_15s_32_2_1_U4          | 2   |        | mul_ln37    | mul    | auto     | 1       |
+|    mul_32s_16s_32_2_1_U5          | 2   |        | mul_ln37_1  | mul    | auto     | 1       |
+|    add_ln37_2_fu_612_p2           |     |        | add_ln37_2  | add    | fabric   | 0       |
+|    mul_32s_34ns_65_2_1_U2         | 4   |        | mul_ln37_2  | mul    | auto     | 1       |
+|    sub_ln37_fu_885_p2             |     |        | sub_ln37    | sub    | fabric   | 0       |
+|    select_ln37_fu_909_p3          |     |        | select_ln37 | select | auto_sel | 0       |
+|    sub_ln37_1_fu_920_p2           |     |        | sub_ln37_1  | sub    | fabric   | 0       |
+|    u_fu_926_p3                    |     |        | u           | select | auto_sel | 0       |
+|    sub_ln38_2_fu_729_p2           |     |        | sub_ln38_2  | sub    | fabric   | 0       |
+|    mul_32s_17s_32_2_1_U6          | 2   |        | mul_ln38    | mul    | auto     | 1       |
+|    mul_32s_15s_32_2_1_U7          | 2   |        | mul_ln38_1  | mul    | auto     | 1       |
+|    mul_32s_34ns_65_2_1_U3         | 4   |        | mul_ln38_2  | mul    | auto     | 1       |
+|    sub_ln38_fu_932_p2             |     |        | sub_ln38    | sub    | fabric   | 0       |
+|    select_ln38_fu_956_p3          |     |        | select_ln38 | select | auto_sel | 0       |
+|    sub_ln38_1_fu_967_p2           |     |        | sub_ln38_1  | sub    | fabric   | 0       |
+|    v_fu_973_p3                    |     |        | v           | select | auto_sel | 0       |
++-----------------------------------+-----+--------+-------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + toyuv           |           |           | 0    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------+-------------------------------------+
+| Type      | Options                              | Location                            |
++-----------+--------------------------------------+-------------------------------------+
+| interface | axis port=ch_r                       | ../../toyuv.cpp:13 in toyuv, ch_r   |
+| interface | axis port=ch_g                       | ../../toyuv.cpp:14 in toyuv, ch_g   |
+| interface | axis port=ch_b                       | ../../toyuv.cpp:15 in toyuv, ch_b   |
+| interface | axis port=ch_y                       | ../../toyuv.cpp:16 in toyuv, ch_y   |
+| interface | axis port=ch_u                       | ../../toyuv.cpp:17 in toyuv, ch_u   |
+| interface | axis port=ch_v                       | ../../toyuv.cpp:18 in toyuv, ch_v   |
+| interface | s_axilite port=width bundle=control  | ../../toyuv.cpp:19 in toyuv, width  |
+| interface | s_axilite port=height bundle=control | ../../toyuv.cpp:20 in toyuv, height |
+| interface | s_axilite port=return bundle=control | ../../toyuv.cpp:21 in toyuv, return |
++-----------+--------------------------------------+-------------------------------------+
+
+

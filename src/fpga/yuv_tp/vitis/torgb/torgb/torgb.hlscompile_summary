@@ -1,0 +1,245 @@
+<ENTRY>
+{
+ "thisFile": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/torgb.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jul 23 15:31:14 2025",
+ "timestampMillis": "1753277474905",
+ "buildStep": {
+  "cmdId": "84fa6352-5ae0-4bd1-8cd5-accb9434b93f",
+  "name": "v++",
+  "logFile": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/logs/torgb.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/jeanleo2/yuv_tp/vitis/torgb/hls_config.cfg --work_dir torgb ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/jeanleo2/yuv_tp/vitis/torgb/hls_config.cfg",
+   "--work_dir",
+   "torgb"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/jeanleo2/yuv_tp/vitis/torgb/hls_config.cfg",
+    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.file=/home/jeanleo2/yuv_tp/torgb.cpp\nsyn.top=torgb"
+   }
+  ],
+  "cwd": "/home/jeanleo2/yuv_tp/vitis/torgb"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:14 2025",
+ "timestampMillis": "1753277474905",
+ "status": {
+  "cmdId": "84fa6352-5ae0-4bd1-8cd5-accb9434b93f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Jul 23 15:31:17 2025",
+ "timestampMillis": "1753277477692",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "torgb",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/jeanleo2/yuv_tp/torgb.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 23 15:31:17 2025",
+ "timestampMillis": "1753277477693",
+ "buildStep": {
+  "cmdId": "b62ec471-48df-4c13-b37b-f992465f5c28",
+  "name": "",
+  "logFile": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/jeanleo2/yuv_tp/vitis/torgb"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:17 2025",
+ "timestampMillis": "1753277477693",
+ "status": {
+  "cmdId": "b62ec471-48df-4c13-b37b-f992465f5c28",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:17 2025",
+ "timestampMillis": "1753277477693",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:17 2025",
+ "timestampMillis": "1753277477693",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:17 2025",
+ "timestampMillis": "1753277477693",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:26 2025",
+ "timestampMillis": "1753277486673",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:26 2025",
+ "timestampMillis": "1753277486674",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:26 2025",
+ "timestampMillis": "1753277486674",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:26 2025",
+ "timestampMillis": "1753277486674",
+ "status": {
+  "cmdId": "b62ec471-48df-4c13-b37b-f992465f5c28",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 23 15:31:26 2025",
+ "timestampMillis": "1753277486776",
+ "status": {
+  "cmdId": "84fa6352-5ae0-4bd1-8cd5-accb9434b93f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:26 2025",
+ "timestampMillis": "1753277486792",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/reports/v++_compile_torgb_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 23 15:31:26 2025",
+ "timestampMillis": "1753277486792",
+ "report": {
+  "path": "/home/jeanleo2/yuv_tp/vitis/torgb/torgb/reports/.db/v++_compile_torgb_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

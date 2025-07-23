@@ -1,0 +1,140 @@
+
+
+================================================================
+== Synthesis Summary Report of 'scale'
+================================================================
++ General Information: 
+    * Date:           Wed Jul 23 15:31:11 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        scale
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+------------+-----------+-----+
+    |              Modules              | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |        |            |           |     |
+    |              & Loops              | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF     |    LUT    | URAM|
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+------------+-----------+-----+
+    |+ scale                            |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|  3 (1%)|  1039 (~0%)|   823 (1%)|    -|
+    | + scale_Pipeline_VITIS_LOOP_23_1  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|   503 (~0%)|  329 (~0%)|    -|
+    |  o VITIS_LOOP_23_1                |     -|  7.30|        -|       -|         5|        1|     -|       yes|     -|       -|           -|          -|    -|
+    +-----------------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+
+| Interface  | Data Width | Address Width | Offset | Register |
++------------+------------+---------------+--------+----------+
+| s_axi_CTRL | 32         | 6             | 24     | 0        |
++------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register     | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL | CTRL         | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL | GIER         | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL | IP_IER       | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL | IP_ISR       | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CTRL | ap_return    | 0x10   | 32    | R      | Data signal of ap_return         |                                                                      |
+| s_axi_CTRL | scale_factor | 0x18   | 32    | W      | Data signal of scale_factor      |                                                                      |
+| s_axi_CTRL | width        | 0x20   | 32    | W      | Data signal of width             |                                                                      |
+| s_axi_CTRL | height       | 0x28   | 32    | W      | Data signal of height            |                                                                      |
++------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| ch_in     | in        | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| ch_out    | out       | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+--------------------------------------------------------+
+| Argument     | Direction | Datatype                                               |
++--------------+-----------+--------------------------------------------------------+
+| scale_factor | in        | int                                                    |
+| width        | in        | int                                                    |
+| height       | in        | int                                                    |
+| ch_in        | in        | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| ch_out       | out       | stream<hls::axis<ap_int<32>, 2, 5, 6, '8', false>, 0>& |
+| return       | out       | int                                                    |
++--------------+-----------+--------------------------------------------------------+
+
+* SW-to-HW Mapping
++--------------+--------------+-----------+----------------------------------------+
+| Argument     | HW Interface | HW Type   | HW Info                                |
++--------------+--------------+-----------+----------------------------------------+
+| scale_factor | s_axi_CTRL   | register  | name=scale_factor offset=0x18 range=32 |
+| width        | s_axi_CTRL   | register  | name=width offset=0x20 range=32        |
+| height       | s_axi_CTRL   | register  | name=height offset=0x28 range=32       |
+| ch_in        | ch_in        | interface |                                        |
+| ch_out       | ch_out       | interface |                                        |
+| return       | s_axi_CTRL   | register  | name=ap_return offset=0x10 range=32    |
++--------------+--------------+-----------+----------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------+-----+--------+------------+-------+--------+---------+
+| Name                              | DSP | Pragma | Variable   | Op    | Impl   | Latency |
++-----------------------------------+-----+--------+------------+-------+--------+---------+
+| + scale                           | 3   |        |            |       |        |         |
+|   mul_32s_32s_32_2_1_U18          | 3   |        | total_data | mul   | auto   | 1       |
+|  + scale_Pipeline_VITIS_LOOP_23_1 | 0   |        |            |       |        |         |
+|    icmp_ln23_fu_149_p2            |     |        | icmp_ln23  | setlt | auto   | 0       |
+|    add_ln23_fu_155_p2             |     |        | add_ln23   | add   | fabric | 0       |
++-----------------------------------+-----+--------+------------+-------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name           | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                |           |           |      |      |        |          |      |         | Banks            |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + scale        |           |           | 0    | 0    |        |          |      |         |                  |
+|   CTRL_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------+-------------------------------------------+
+| Type      | Options                                 | Location                                  |
++-----------+-----------------------------------------+-------------------------------------------+
+| interface | axis port=ch_in                         | ../../scale.cpp:13 in scale, ch_in        |
+| interface | axis port=ch_out                        | ../../scale.cpp:14 in scale, ch_out       |
+| interface | s_axilite port=width bundle=CTRL        | ../../scale.cpp:16 in scale, width        |
+| interface | s_axilite port=height bundle=CTRL       | ../../scale.cpp:17 in scale, height       |
+| interface | s_axilite port=scale_factor bundle=CTRL | ../../scale.cpp:18 in scale, scale_factor |
+| interface | s_axilite port=return bundle=CTRL       | ../../scale.cpp:19 in scale, return       |
++-----------+-----------------------------------------+-------------------------------------------+
+
+

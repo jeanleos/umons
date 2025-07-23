@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "torgb.cpp",
+    "fileloc": 9,
+    "instructions": 94,
+    "loads": {
+      "L": 3
+    },
+    "name": "torgb",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 499
+  }
+}

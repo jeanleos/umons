@@ -1,0 +1,31 @@
+directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=name=torgb_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=torgb
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=axis port=ch_y_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=ch_y
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=axis port=ch_u_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=ch_u
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=axis port=ch_v_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=ch_v
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=axis port=ch_r_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=ch_r
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=axis port=ch_g_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=ch_g
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=axis port=ch_b_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=ch_b
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=s_axilite port=width bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=width bundle=control
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=s_axilite port=height bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=height bundle=control
+        ^
+/home/jeanleo2/yuv_tp/torgb.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=torgb_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+10 warnings generated.
