@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module scale_hls_deadlock_idx1_monitor ( // for module scale_scale_inst.grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96
+module scale_hls_deadlock_idx1_monitor ( // for module scale_scale_inst.grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96
     input wire clock,
     input wire reset,
     input wire [1:0] axis_block_sigs,

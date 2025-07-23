@@ -1,0 +1,79 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Wed Jul 23 17:10:35 2025
+| Host         : administrateur-ThinkStation-P2-Tower running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_torgb_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_torgb_0_1 (xilinx.com:hls:torgb:1.0) from (Rev. 2114183792) to (Rev. 2114183888)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Wed Jul 23 17:10:35 2025
+| Host         : administrateur-ThinkStation-P2-Tower running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_scale_2_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_scale_2_1 (xilinx.com:hls:scale:1.0) from (Rev. 2114183791) to (Rev. 2114183889)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Wed Jul 23 17:10:35 2025
+| Host         : administrateur-ThinkStation-P2-Tower running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_scale_1_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_scale_1_1 (xilinx.com:hls:scale:1.0) from (Rev. 2114183791) to (Rev. 2114183889)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Wed Jul 23 17:10:35 2025
+| Host         : administrateur-ThinkStation-P2-Tower running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_scale_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_scale_0_1 (xilinx.com:hls:scale:1.0) from (Rev. 2114183791) to (Rev. 2114183889)
+

@@ -3,8 +3,8 @@
     "basicblocks": 7,
     "calls": "",
     "file": "scale.cpp",
-    "fileloc": 9,
-    "instructions": 136,
+    "fileloc": 12,
+    "instructions": 135,
     "loads": {
       "L": 7
     },
@@ -12,6 +12,6 @@
     "stores": {
       "L": 7
     },
-    "total_instructions": 136
+    "total_instructions": 135
   }
 }

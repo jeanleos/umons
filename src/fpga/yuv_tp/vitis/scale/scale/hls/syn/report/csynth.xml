@@ -31,14 +31,14 @@
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:9</SourceLocation>
+            <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:12</SourceLocation>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>0</BRAM_18K>
             <DSP>3</DSP>
-            <FF>1039</FF>
+            <FF>1046</FF>
             <LUT>821</LUT>
             <URAM>0</URAM>
         </Resources>
@@ -493,11 +493,11 @@
             <ModuleName>scale</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96</InstName>
-                    <ModuleName>scale_Pipeline_VITIS_LOOP_23_1</ModuleName>
+                    <InstName>grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96</InstName>
+                    <ModuleName>scale_Pipeline_VITIS_LOOP_26_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>96</ID>
-                    <BindInstances>icmp_ln23_fu_149_p2 add_ln23_fu_155_p2</BindInstances>
+                    <BindInstances>icmp_ln26_fu_143_p2 add_ln26_fu_149_p2</BindInstances>
                 </Instance>
             </InstancesList>
             <BindInstances>mul_32s_32s_32_2_1_U18 CTRL_s_axi_U</BindInstances>
@@ -505,9 +505,9 @@
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>scale_Pipeline_VITIS_LOOP_23_1</Name>
+            <Name>scale_Pipeline_VITIS_LOOP_26_1</Name>
             <Loops>
-                <VITIS_LOOP_23_1/>
+                <VITIS_LOOP_26_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -526,8 +526,8 @@
                     <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_23_1>
-                        <Name>VITIS_LOOP_23_1</Name>
+                    <VITIS_LOOP_26_1>
+                        <Name>VITIS_LOOP_26_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
@@ -536,25 +536,25 @@
                         <PipelineDepth>5</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_23_1>
+                    </VITIS_LOOP_26_1>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:23</SourceLocation>
+                    <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:26</SourceLocation>
                     <SummaryOfLoopViolations>
-                        <VITIS_LOOP_23_1>
-                            <Name>VITIS_LOOP_23_1</Name>
+                        <VITIS_LOOP_26_1>
+                            <Name>VITIS_LOOP_26_1</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:23</SourceLocation>
-                        </VITIS_LOOP_23_1>
+                            <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:26</SourceLocation>
+                        </VITIS_LOOP_26_1>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>503</FF>
+                    <FF>510</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>329</LUT>
@@ -572,8 +572,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_23_1" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln23_fu_149_p2" SOURCE="/home/jeanleo2/yuv_tp/scale.cpp:23" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln23" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_23_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln23_fu_155_p2" SOURCE="/home/jeanleo2/yuv_tp/scale.cpp:23" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln23" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_26_1" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln26_fu_143_p2" SOURCE="/home/jeanleo2/yuv_tp/scale.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_26_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_149_p2" SOURCE="/home/jeanleo2/yuv_tp/scale.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln26" VISIBLE="true"/>
             </BindNodes>
         </Module>
         <Module>
@@ -597,7 +597,7 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:9</SourceLocation>
+                    <SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:12</SourceLocation>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -608,7 +608,7 @@
                     <DSP>3</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>1</UTIL_DSP>
-                    <FF>1039</FF>
+                    <FF>1046</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>823</LUT>
@@ -620,7 +620,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U18" SOURCE="/home/jeanleo2/yuv_tp/scale.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="total_data" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U18" SOURCE="/home/jeanleo2/yuv_tp/scale.cpp:24" STORAGESUBTYPE="" URAM="0" VARIABLE="total_data" VISIBLE="true"/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="CTRL" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="CTRL_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
             </BindNodes>
         </Module>
@@ -873,12 +873,12 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="interface" location="../../scale.cpp:13" status="valid" parentFunction="scale" variable="ch_in" isDirective="0" options="axis port=ch_in"/>
-        <Pragma type="interface" location="../../scale.cpp:14" status="valid" parentFunction="scale" variable="ch_out" isDirective="0" options="axis port=ch_out"/>
-        <Pragma type="interface" location="../../scale.cpp:16" status="valid" parentFunction="scale" variable="width" isDirective="0" options="s_axilite port=width bundle=CTRL"/>
-        <Pragma type="interface" location="../../scale.cpp:17" status="valid" parentFunction="scale" variable="height" isDirective="0" options="s_axilite port=height bundle=CTRL"/>
-        <Pragma type="interface" location="../../scale.cpp:18" status="valid" parentFunction="scale" variable="scale_factor" isDirective="0" options="s_axilite port=scale_factor bundle=CTRL"/>
-        <Pragma type="interface" location="../../scale.cpp:19" status="valid" parentFunction="scale" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL"/>
+        <Pragma type="interface" location="../../scale.cpp:16" status="valid" parentFunction="scale" variable="ch_in" isDirective="0" options="axis port=ch_in"/>
+        <Pragma type="interface" location="../../scale.cpp:17" status="valid" parentFunction="scale" variable="ch_out" isDirective="0" options="axis port=ch_out"/>
+        <Pragma type="interface" location="../../scale.cpp:19" status="valid" parentFunction="scale" variable="width" isDirective="0" options="s_axilite port=width bundle=CTRL"/>
+        <Pragma type="interface" location="../../scale.cpp:20" status="valid" parentFunction="scale" variable="height" isDirective="0" options="s_axilite port=height bundle=CTRL"/>
+        <Pragma type="interface" location="../../scale.cpp:21" status="valid" parentFunction="scale" variable="scale_factor" isDirective="0" options="s_axilite port=scale_factor bundle=CTRL"/>
+        <Pragma type="interface" location="../../scale.cpp:22" status="valid" parentFunction="scale" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL"/>
     </PragmaReport>
 </profile>
 

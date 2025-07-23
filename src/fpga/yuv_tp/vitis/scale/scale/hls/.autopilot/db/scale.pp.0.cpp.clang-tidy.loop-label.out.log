@@ -18,8 +18,8 @@
       ^~~
       VITIS_LOOP_1248_1: 
 /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp:3920:7: note: FIX-IT applied suggested code changes
-/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp:9025:5: warning: Added loop label VITIS_LOOP_23_1:   [xilinx-label-all-loops]
+/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp:9028:5: warning: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
     for (int i = 0; i < total_data; i++) {
     ^~~
-    VITIS_LOOP_23_1: 
-/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp:9025:5: note: FIX-IT applied suggested code changes
+    VITIS_LOOP_26_1: 
+/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp:9028:5: note: FIX-IT applied suggested code changes

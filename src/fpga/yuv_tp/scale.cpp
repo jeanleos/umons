@@ -6,6 +6,9 @@
 
 typedef ap_axis<32, 2, 5, 6> data_t;
 
+#define min(a, b) ({ __typeof__ (a) _a = (a); __typeof__ (b) _b = (b); _a > _b ? _b : _a; })
+#define max(a, b) ({ __typeof__ (a) _a = (a); __typeof__ (b) _b = (b); _a > _b ? _a : _b; })
+
 int scale(
     int scale_factor, int width, int height,
     hls::stream<data_t> &ch_in, hls::stream<data_t> &ch_out
@@ -26,7 +29,7 @@ int scale(
 
         ch_in.read(_tmp); 
         tmp = _tmp.data.to_int();
-        tmp_out = (tmp * scale_factor) >> 7;
+        tmp_out = tmp * scale_factor;
 
         _tmp.data = tmp_out;
         ch_out.write(_tmp);

@@ -161,48 +161,48 @@ set RtlHierarchyInfo {[
 			{"Name" : "height", "Type" : "None", "Direction" : "I"},
 			{"Name" : "ch_in_V_data_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "ch_in",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_in_V_data_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_in_V_data_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_in_V_keep_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "ch_in",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_in_V_keep_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_in_V_keep_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_in_V_strb_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "ch_in",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_in_V_strb_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_in_V_strb_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_in_V_user_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "ch_in",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_in_V_user_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_in_V_user_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_in_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "ch_in",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_in_V_last_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_in_V_last_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_in_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "ch_in",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_in_V_id_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_in_V_id_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_in_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "ch_in",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_in_V_dest_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_in_V_dest_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_out_V_data_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_out_V_data_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_out_V_data_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_out_V_keep_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_out_V_keep_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_out_V_keep_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_out_V_strb_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_out_V_strb_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_out_V_strb_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_out_V_user_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_out_V_user_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_out_V_user_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_out_V_last_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_out_V_last_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_out_V_last_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_out_V_id_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_out_V_id_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_out_V_id_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "ch_out_V_dest_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Port" : "ch_out_V_dest_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "scale_Pipeline_VITIS_LOOP_23_1",
+					{"ID" : "1", "SubInstance" : "grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Port" : "ch_out_V_dest_V", "Inst_start_state" : "4", "Inst_end_state" : "5"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "scale_Pipeline_VITIS_LOOP_26_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -237,9 +237,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "ch_out_V_id_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out"},
 			{"Name" : "ch_out_V_dest_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_out"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_23_1", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_26_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter4", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter4", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.CTRL_s_axi_U", "Parent" : "0"},
 	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_2_1_U18", "Parent" : "0"},
 	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_ch_in_V_data_V_U", "Parent" : "0"},
@@ -277,7 +277,7 @@ set ArgLastReadFirstWriteLatency {
 		ch_out_V_last_V {Type O LastRead -1 FirstWrite 4}
 		ch_out_V_id_V {Type O LastRead -1 FirstWrite 4}
 		ch_out_V_dest_V {Type O LastRead -1 FirstWrite 4}}
-	scale_Pipeline_VITIS_LOOP_23_1 {
+	scale_Pipeline_VITIS_LOOP_26_1 {
 		total_data {Type I LastRead 0 FirstWrite -1}
 		ch_in_V_data_V {Type I LastRead 1 FirstWrite -1}
 		ch_in_V_keep_V {Type I LastRead 1 FirstWrite -1}

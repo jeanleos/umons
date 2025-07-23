@@ -133,10 +133,10 @@ entry:31 %total_data = mul i32 %height_read, i32 %width_read
 
 <Node id="52" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="2" op_6_bw="1" op_7_bw="5" op_8_bw="6" op_9_bw="32" op_10_bw="32" op_11_bw="4" op_12_bw="4" op_13_bw="2" op_14_bw="1" op_15_bw="5" op_16_bw="6">
 <![CDATA[
-entry:34 %call_ln21 = call void @scale_Pipeline_VITIS_LOOP_23_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V
+entry:34 %call_ln24 = call void @scale_Pipeline_VITIS_LOOP_26_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln21"/></StgValue>
+<StgValue><ssdm name="call_ln24"/></StgValue>
 </operation>
 </state>
 
@@ -151,10 +151,10 @@ entry:34 %call_ln21 = call void @scale_Pipeline_VITIS_LOOP_23_1, i32 %total_data
 
 <Node id="52" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="2" op_6_bw="1" op_7_bw="5" op_8_bw="6" op_9_bw="32" op_10_bw="32" op_11_bw="4" op_12_bw="4" op_13_bw="2" op_14_bw="1" op_15_bw="5" op_16_bw="6">
 <![CDATA[
-entry:34 %call_ln21 = call void @scale_Pipeline_VITIS_LOOP_23_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V
+entry:34 %call_ln24 = call void @scale_Pipeline_VITIS_LOOP_26_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V
 
 ]]></Node>
-<StgValue><ssdm name="call_ln21"/></StgValue>
+<StgValue><ssdm name="call_ln24"/></StgValue>
 </operation>
 </state>
 
@@ -184,10 +184,10 @@ entry:0 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 0
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:1 %spectopmodule_ln9 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_11
+entry:1 %spectopmodule_ln12 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_11
 
 ]]></Node>
-<StgValue><ssdm name="spectopmodule_ln9"/></StgValue>
+<StgValue><ssdm name="spectopmodule_ln12"/></StgValue>
 </operation>
 
 <operation id="16" st_id="6" stage="1" lat="1">
@@ -589,10 +589,10 @@ entry:27 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0,
 
 <Node id="50" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="5" op_7_bw="6" op_8_bw="0">
 <![CDATA[
-entry:32 %specaxissidechannel_ln23 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V, void @empty_9
+entry:32 %specaxissidechannel_ln26 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V, void @empty_9
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln23"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln26"/></StgValue>
 </operation>
 
 <operation id="43" st_id="6" stage="1" lat="1">
@@ -604,10 +604,10 @@ entry:32 %specaxissidechannel_ln23 = specaxissidechannel void @_ssdm_op_SpecAXIS
 
 <Node id="51" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="2" op_5_bw="1" op_6_bw="5" op_7_bw="6" op_8_bw="0">
 <![CDATA[
-entry:33 %specaxissidechannel_ln23 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, void @empty_10
+entry:33 %specaxissidechannel_ln26 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, void @empty_10
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln23"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln26"/></StgValue>
 </operation>
 
 <operation id="44" st_id="6" stage="1" lat="1">
@@ -619,10 +619,10 @@ entry:33 %specaxissidechannel_ln23 = specaxissidechannel void @_ssdm_op_SpecAXIS
 
 <Node id="53" bw="0" op_0_bw="32">
 <![CDATA[
-entry:35 %ret_ln35 = ret i32 0
+entry:35 %ret_ln38 = ret i32 0
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln35"/></StgValue>
+<StgValue><ssdm name="ret_ln38"/></StgValue>
 </operation>
 </state>
 </state_list>

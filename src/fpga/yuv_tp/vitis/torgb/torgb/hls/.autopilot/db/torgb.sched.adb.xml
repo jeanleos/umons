@@ -1099,10 +1099,10 @@ entry:65 %specaxissidechannel_ln24 = specaxissidechannel void @_ssdm_op_SpecAXIS
 
 <Node id="112" bw="0" op_0_bw="32">
 <![CDATA[
-entry:67 %ret_ln49 = ret i32 0
+entry:67 %ret_ln53 = ret i32 0
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln49"/></StgValue>
+<StgValue><ssdm name="ret_ln53"/></StgValue>
 </operation>
 </state>
 </state_list>

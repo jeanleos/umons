@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'scale'
 ================================================================
-* Date:           Wed Jul 23 15:31:11 2025
+* Date:           Wed Jul 23 17:03:19 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        scale
@@ -80,25 +80,25 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.00>
-ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %height" [/home/jeanleo2/yuv_tp/scale.cpp:10]   --->   Operation 7 'read' 'height_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 8 [1/1] (1.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %width" [/home/jeanleo2/yuv_tp/scale.cpp:10]   --->   Operation 8 'read' 'width_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 9 [1/1] (1.00ns)   --->   "%scale_factor_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %scale_factor" [/home/jeanleo2/yuv_tp/scale.cpp:10]   --->   Operation 9 'read' 'scale_factor_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %height" [/home/jeanleo2/yuv_tp/scale.cpp:13]   --->   Operation 7 'read' 'height_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 8 [1/1] (1.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %width" [/home/jeanleo2/yuv_tp/scale.cpp:13]   --->   Operation 8 'read' 'width_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 9 [1/1] (1.00ns)   --->   "%scale_factor_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %scale_factor" [/home/jeanleo2/yuv_tp/scale.cpp:13]   --->   Operation 9 'read' 'scale_factor_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
 
 State 2 <SV = 1> <Delay = 6.91>
-ST_2 : Operation 10 [2/2] (6.91ns)   --->   "%total_data = mul i32 %height_read, i32 %width_read" [/home/jeanleo2/yuv_tp/scale.cpp:21]   --->   Operation 10 'mul' 'total_data' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [2/2] (6.91ns)   --->   "%total_data = mul i32 %height_read, i32 %width_read" [/home/jeanleo2/yuv_tp/scale.cpp:24]   --->   Operation 10 'mul' 'total_data' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 3 <SV = 2> <Delay = 6.91>
-ST_3 : Operation 11 [1/2] (6.91ns)   --->   "%total_data = mul i32 %height_read, i32 %width_read" [/home/jeanleo2/yuv_tp/scale.cpp:21]   --->   Operation 11 'mul' 'total_data' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 11 [1/2] (6.91ns)   --->   "%total_data = mul i32 %height_read, i32 %width_read" [/home/jeanleo2/yuv_tp/scale.cpp:24]   --->   Operation 11 'mul' 'total_data' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 4.14>
-ST_4 : Operation 12 [2/2] (4.14ns)   --->   "%call_ln21 = call void @scale_Pipeline_VITIS_LOOP_23_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V" [/home/jeanleo2/yuv_tp/scale.cpp:21]   --->   Operation 12 'call' 'call_ln21' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 12 [2/2] (4.14ns)   --->   "%call_ln24 = call void @scale_Pipeline_VITIS_LOOP_26_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V" [/home/jeanleo2/yuv_tp/scale.cpp:24]   --->   Operation 12 'call' 'call_ln24' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Generic Core
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln21 = call void @scale_Pipeline_VITIS_LOOP_23_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V" [/home/jeanleo2/yuv_tp/scale.cpp:21]   --->   Operation 13 'call' 'call_ln21' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln24 = call void @scale_Pipeline_VITIS_LOOP_26_1, i32 %total_data, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, i32 %scale_factor_read, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V" [/home/jeanleo2/yuv_tp/scale.cpp:24]   --->   Operation 13 'call' 'call_ln24' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 6 <SV = 5> <Delay = 0.00>
 ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 0"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%spectopmodule_ln9 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_11" [/home/jeanleo2/yuv_tp/scale.cpp:9]   --->   Operation 15 'spectopmodule' 'spectopmodule_ln9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%spectopmodule_ln12 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_11" [/home/jeanleo2/yuv_tp/scale.cpp:12]   --->   Operation 15 'spectopmodule' 'spectopmodule_ln12' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %scale_factor"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %scale_factor, void @empty, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %scale_factor, void @empty_4, i32 4294967295, i32 4294967295, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
@@ -125,9 +125,9 @@ ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void
 ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ch_out_V_id_V"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %ch_out_V_dest_V"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_1, void @empty_8, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln23 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V, void @empty_9" [/home/jeanleo2/yuv_tp/scale.cpp:23]   --->   Operation 42 'specaxissidechannel' 'specaxissidechannel_ln23' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln23 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, void @empty_10" [/home/jeanleo2/yuv_tp/scale.cpp:23]   --->   Operation 43 'specaxissidechannel' 'specaxissidechannel_ln23' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln35 = ret i32 0" [/home/jeanleo2/yuv_tp/scale.cpp:35]   --->   Operation 44 'ret' 'ret_ln35' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln26 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_out_V_data_V, i4 %ch_out_V_keep_V, i4 %ch_out_V_strb_V, i2 %ch_out_V_user_V, i1 %ch_out_V_last_V, i5 %ch_out_V_id_V, i6 %ch_out_V_dest_V, void @empty_9" [/home/jeanleo2/yuv_tp/scale.cpp:26]   --->   Operation 42 'specaxissidechannel' 'specaxissidechannel_ln26' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln26 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %ch_in_V_data_V, i4 %ch_in_V_keep_V, i4 %ch_in_V_strb_V, i2 %ch_in_V_user_V, i1 %ch_in_V_last_V, i5 %ch_in_V_id_V, i6 %ch_in_V_dest_V, void @empty_10" [/home/jeanleo2/yuv_tp/scale.cpp:26]   --->   Operation 43 'specaxissidechannel' 'specaxissidechannel_ln26' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln38 = ret i32 0" [/home/jeanleo2/yuv_tp/scale.cpp:38]   --->   Operation 44 'ret' 'ret_ln38' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -137,19 +137,19 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
  <State 1>: 1.000ns
 The critical path consists of the following:
-	s_axi read operation ('height_read', /home/jeanleo2/yuv_tp/scale.cpp:10) on port 'height' (/home/jeanleo2/yuv_tp/scale.cpp:10) [46]  (1.000 ns)
+	s_axi read operation ('height_read', /home/jeanleo2/yuv_tp/scale.cpp:13) on port 'height' (/home/jeanleo2/yuv_tp/scale.cpp:13) [46]  (1.000 ns)
 
  <State 2>: 6.912ns
 The critical path consists of the following:
-	'mul' operation 32 bit ('total_data', /home/jeanleo2/yuv_tp/scale.cpp:21) [49]  (6.912 ns)
+	'mul' operation 32 bit ('total_data', /home/jeanleo2/yuv_tp/scale.cpp:24) [49]  (6.912 ns)
 
  <State 3>: 6.912ns
 The critical path consists of the following:
-	'mul' operation 32 bit ('total_data', /home/jeanleo2/yuv_tp/scale.cpp:21) [49]  (6.912 ns)
+	'mul' operation 32 bit ('total_data', /home/jeanleo2/yuv_tp/scale.cpp:24) [49]  (6.912 ns)
 
  <State 4>: 4.140ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln21', /home/jeanleo2/yuv_tp/scale.cpp:21) to 'scale_Pipeline_VITIS_LOOP_23_1' [52]  (4.140 ns)
+	'call' operation 0 bit ('call_ln24', /home/jeanleo2/yuv_tp/scale.cpp:24) to 'scale_Pipeline_VITIS_LOOP_26_1' [52]  (4.140 ns)
 
  <State 5>: 0.000ns
 The critical path consists of the following:

@@ -18,7 +18,7 @@
 <PipelineType>loop auto-rewind stp (delay=0 cycles)</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.923</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.728</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -38,7 +38,7 @@
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>10</PipelineDepth>
+<PipelineDepth>2</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_24_1>
@@ -60,10 +60,10 @@
 
 <AreaEstimates>
 <Resources>
-<DSP>16</DSP>
-<FF>3275</FF>
-<LUT>2166</LUT>
+<FF>37</FF>
+<LUT>183</LUT>
 <BRAM_18K>0</BRAM_18K>
+<DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

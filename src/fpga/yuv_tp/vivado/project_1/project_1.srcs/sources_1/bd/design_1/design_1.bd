@@ -1952,28 +1952,28 @@
       },
       "torgb_0": {
         "vlnv": "xilinx.com:hls:torgb:1.0",
-        "ip_revision": "2114183792",
+        "ip_revision": "2114183888",
         "xci_name": "design_1_torgb_0_1",
         "xci_path": "ip/design_1_torgb_0_1/design_1_torgb_0_1.xci",
         "inst_hier_path": "torgb_0"
       },
       "scale_0": {
         "vlnv": "xilinx.com:hls:scale:1.0",
-        "ip_revision": "2114183791",
+        "ip_revision": "2114183889",
         "xci_name": "design_1_scale_0_1",
         "xci_path": "ip/design_1_scale_0_1/design_1_scale_0_1.xci",
         "inst_hier_path": "scale_0"
       },
       "scale_1": {
         "vlnv": "xilinx.com:hls:scale:1.0",
-        "ip_revision": "2114183791",
+        "ip_revision": "2114183889",
         "xci_name": "design_1_scale_1_1",
         "xci_path": "ip/design_1_scale_1_1/design_1_scale_1_1.xci",
         "inst_hier_path": "scale_1"
       },
       "scale_2": {
         "vlnv": "xilinx.com:hls:scale:1.0",
-        "ip_revision": "2114183791",
+        "ip_revision": "2114183889",
         "xci_name": "design_1_scale_2_1",
         "xci_path": "ip/design_1_scale_2_1/design_1_scale_2_1.xci",
         "inst_hier_path": "scale_2"
@@ -3961,10 +3961,6 @@
           "rst_ps7_0_100M/slowest_sync_clk",
           "axi_dma_1/s_axi_lite_aclk",
           "axi_dma_2/s_axi_lite_aclk",
-          "scale_0/ap_clk",
-          "scale_1/ap_clk",
-          "scale_2/ap_clk",
-          "torgb_0/ap_clk",
           "toyuv_0/ap_clk",
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_dma_0/m_axi_s2mm_aclk",
@@ -3983,7 +3979,11 @@
           "axi_mem_intercon/S05_ACLK",
           "axi_mem_intercon/S06_ACLK",
           "axi_mem_intercon/S07_ACLK",
-          "axi_mem_intercon/S08_ACLK"
+          "axi_mem_intercon/S08_ACLK",
+          "scale_0/ap_clk",
+          "scale_1/ap_clk",
+          "scale_2/ap_clk",
+          "torgb_0/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3999,10 +3999,6 @@
           "axi_smc/aresetn",
           "axi_dma_1/axi_resetn",
           "axi_dma_2/axi_resetn",
-          "scale_0/ap_rst_n",
-          "scale_1/ap_rst_n",
-          "scale_2/ap_rst_n",
-          "torgb_0/ap_rst_n",
           "toyuv_0/ap_rst_n",
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
@@ -4014,7 +4010,11 @@
           "axi_mem_intercon/S05_ARESETN",
           "axi_mem_intercon/S06_ARESETN",
           "axi_mem_intercon/S07_ARESETN",
-          "axi_mem_intercon/S08_ARESETN"
+          "axi_mem_intercon/S08_ARESETN",
+          "scale_0/ap_rst_n",
+          "scale_1/ap_rst_n",
+          "scale_2/ap_rst_n",
+          "torgb_0/ap_rst_n"
         ]
       }
     },

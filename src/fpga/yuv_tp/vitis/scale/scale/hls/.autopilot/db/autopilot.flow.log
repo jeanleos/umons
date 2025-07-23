@@ -1,6 +1,6 @@
 Execute     source -notrace -encoding utf-8 /tools/Xilinx/Vitis/2024.2/tps/tcl/tcl8.6/clock.tcl 
 Execute       source -encoding utf-8 /tools/Xilinx/Vitis/2024.2/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
-INFO-FLOW: Workspace /home/jeanleo2/yuv_tp/vitis/scale/scale/hls opened at Wed Jul 23 15:31:01 CEST 2025
+INFO-FLOW: Workspace /home/jeanleo2/yuv_tp/vitis/scale/scale/hls opened at Wed Jul 23 17:03:10 CEST 2025
 Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute   apply_ini /home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg 
@@ -38,18 +38,18 @@ Execute         source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/dd
 Execute         source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.74 sec.
+Command     set_part done; 0.72 sec.
 Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from /home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg(5) 
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg(5)
 Execute     config_export -format=ip_catalog 
-Command   apply_ini done; 0.75 sec.
+Command   apply_ini done; 0.73 sec.
 Execute   apply_ini /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/config.cmdline 
 Execute   ::AP::init_summary_file csynth 
 Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
 Execute   csynth_design 
 INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1.9 seconds. CPU system time: 0.16 seconds. Elapsed time: 2.16 seconds; current allocated memory: 326.258 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1.84 seconds. CPU system time: 0.15 seconds. Elapsed time: 1.84 seconds; current allocated memory: 326.285 MB.
 Execute       set_directive_top scale -name=scale 
 Execute       source /tools/Xilinx/Vitis/2024.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /tools/Xilinx/Vitis/2024.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -65,23 +65,23 @@ INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis/2024.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/clang.out.log 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/.systemc_flag -fix-errors /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.25 sec.
+Command       clang_tidy done; 0.21 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/all.directive.json -fix-errors /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.35 sec.
+Command       clang_tidy done; 0.34 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.3 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.clang-tidy.loop-label.err.log
 Execute         source /tools/Xilinx/Vitis/2024.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 0.44 sec.
+Command       clang_tidy done; 0.42 sec.
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis/2024.2/common/technology/autopilot -I /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.bc -hls-platform-db-name=/tools/Xilinx/Vitis/2024.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.clang.out.log 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp.clang.err.log
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.56 seconds. CPU system time: 0.31 seconds. Elapsed time: 1.97 seconds; current allocated memory: 328.215 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.52 seconds. CPU system time: 0.31 seconds. Elapsed time: 1.82 seconds; current allocated memory: 328.211 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.0.bc -args  "/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.g.bc"  
@@ -93,12 +93,12 @@ INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.2.m1.bc -args /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsmc++_39.bc 
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsmc++_39.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.2.m1.bc > /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
-Command       run_link_or_opt done; 0.92 sec.
+Command       run_link_or_opt done; 0.91 sec.
 Execute       run_link_or_opt -opt -out /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.3.fpc.bc -args /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=scale -reflow-float-conversion 
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll|inline -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=scale -reflow-float-conversion -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.3.fpc.bc > /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.37 sec.
+Command       run_link_or_opt done; 0.38 sec.
 Execute       run_link_or_opt -out /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.4.m2.bc -args /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libfloatconversion_39.bc 
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libfloatconversion_39.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.4.m2.bc > /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 Execute       run_link_or_opt -opt -out /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.5.gdce.bc -args /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=scale 
@@ -110,68 +110,68 @@ INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 INFO-FLOW: run_clang (background poll_ms 5000) exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=scale -mllvm -hls-db-dir -mllvm /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -reflow-complete-threshold=4 -mllvm -reflow-array-promotion-threshold=64 -mllvm -assume-maxi-align=1 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-small-array-partition=true -mllvm -reflow-enable-auto-array-promotion=true -mllvm -reflow-enable-auto-array-partition-for-flatten=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -auto-unroll-tripcount-threshold=0 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -reflow-enable-codegen-with-if=true -mllvm -reflow-enable-dataflow-canon=true -mllvm -reflow-enable-dataflow-canon2=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -mllvm -use_read_first_ram_in_loop=1 -mllvm -default-clock-uncertainty=2.7 -x ir /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.5.gdce.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/tools/Xilinx/Vitis/2024.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 2> /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 175 Compile/Link /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 175 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 136 Unroll/Inline (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 136 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 117 Unroll/Inline (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 117 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 118 Unroll/Inline (step 3) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 118 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 118 Unroll/Inline (step 4) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 118 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 117 Array/Struct (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 117 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 117 Array/Struct (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 117 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 117 Array/Struct (step 3) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 117 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 117 Array/Struct (step 4) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 117 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 230 Array/Struct (step 5) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 230 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 244 Performance (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 244 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 230 Performance (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 230 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 131 Performance (step 3) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 131 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 131 Performance (step 4) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 131 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 83 HW Transforms (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 83 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-Execute       send_msg_by_id INFO @200-1995@%s%s%s 71 HW Transforms (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 71 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_23_1> at /home/jeanleo2/yuv_tp/scale.cpp:23:22 
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 174 Compile/Link /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 174 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 135 Unroll/Inline (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 135 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 116 Unroll/Inline (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 117 Unroll/Inline (step 3) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 117 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 117 Unroll/Inline (step 4) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 117 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 116 Array/Struct (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 116 Array/Struct (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 116 Array/Struct (step 3) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 116 Array/Struct (step 4) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 229 Array/Struct (step 5) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 229 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 243 Performance (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 243 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 229 Performance (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 229 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 130 Performance (step 3) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 130 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 130 Performance (step 4) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 130 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 82 HW Transforms (step 1) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 82 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 70 HW Transforms (step 2) /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_26_1> at /home/jeanleo2/yuv_tp/scale.cpp:26:22 
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.43 seconds. CPU system time: 0.3 seconds. Elapsed time: 6.43 seconds; current allocated memory: 329.871 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 329.871 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.42 seconds. CPU system time: 0.32 seconds. Elapsed time: 6.43 seconds; current allocated memory: 329.895 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 329.895 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top scale -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -promote-dbg-pointer -norm-name /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.0.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 329.910 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 329.938 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.1.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.2.prechk.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 329.926 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 329.977 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.g.1.bc to /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -dce -hls-dead-arg-elim -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -lcssa -loop-simplify -phi-select-elim -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.1.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.1.tmp.bc -f 
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.1.tmp.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 351.547 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 351.594 MB.
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -inst-simplify -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-rewind-sink-hoist -loop-outline -hls-dead-arg-elim -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -mul2addshift -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -inst-clarity -bitwidth -dce -validate-dataflow -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.2.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Execute           auto_get_db
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -cdfg-build /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.3.bc -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 352.180 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 352.215 MB.
 INFO-FLOW: Finish building internal data model.
-Command     elaborate done; 8.47 sec.
+Command     elaborate done; 8.32 sec.
 Execute     ap_eval exec zip -j /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -180,58 +180,58 @@ INFO: [HLS 200-10] Synthesizing 'scale' ...
 Execute       ap_set_top_model scale 
 Execute       get_model_list scale -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model scale 
-Execute       preproc_iomode -model scale_Pipeline_VITIS_LOOP_23_1 
+Execute       preproc_iomode -model scale_Pipeline_VITIS_LOOP_26_1 
 Execute       create_clock 
 Execute         ap_set_clock -name default -period 10 -unit ns -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute       get_model_list scale -filter all-wo-channel 
-INFO-FLOW: Model list for configure: scale_Pipeline_VITIS_LOOP_23_1 scale
-INFO-FLOW: Configuring Module : scale_Pipeline_VITIS_LOOP_23_1 ...
-Execute       set_default_model scale_Pipeline_VITIS_LOOP_23_1 
-Execute       apply_spec_resource_limit scale_Pipeline_VITIS_LOOP_23_1 
+INFO-FLOW: Model list for configure: scale_Pipeline_VITIS_LOOP_26_1 scale
+INFO-FLOW: Configuring Module : scale_Pipeline_VITIS_LOOP_26_1 ...
+Execute       set_default_model scale_Pipeline_VITIS_LOOP_26_1 
+Execute       apply_spec_resource_limit scale_Pipeline_VITIS_LOOP_26_1 
 INFO-FLOW: Configuring Module : scale ...
 Execute       set_default_model scale 
 Execute       apply_spec_resource_limit scale 
-INFO-FLOW: Model list for preprocess: scale_Pipeline_VITIS_LOOP_23_1 scale
-INFO-FLOW: Preprocessing Module: scale_Pipeline_VITIS_LOOP_23_1 ...
-Execute       set_default_model scale_Pipeline_VITIS_LOOP_23_1 
-Execute       cdfg_preprocess -model scale_Pipeline_VITIS_LOOP_23_1 
-Execute       rtl_gen_preprocess scale_Pipeline_VITIS_LOOP_23_1 
+INFO-FLOW: Model list for preprocess: scale_Pipeline_VITIS_LOOP_26_1 scale
+INFO-FLOW: Preprocessing Module: scale_Pipeline_VITIS_LOOP_26_1 ...
+Execute       set_default_model scale_Pipeline_VITIS_LOOP_26_1 
+Execute       cdfg_preprocess -model scale_Pipeline_VITIS_LOOP_26_1 
+Execute       rtl_gen_preprocess scale_Pipeline_VITIS_LOOP_26_1 
 INFO-FLOW: Preprocessing Module: scale ...
 Execute       set_default_model scale 
 Execute       cdfg_preprocess -model scale 
 Execute       rtl_gen_preprocess scale 
-INFO-FLOW: Model list for synthesis: scale_Pipeline_VITIS_LOOP_23_1 scale
+INFO-FLOW: Model list for synthesis: scale_Pipeline_VITIS_LOOP_26_1 scale
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'scale_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-42] -- Implementing module 'scale_Pipeline_VITIS_LOOP_26_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model scale_Pipeline_VITIS_LOOP_23_1 
-Execute       schedule -model scale_Pipeline_VITIS_LOOP_23_1 
+Execute       set_default_model scale_Pipeline_VITIS_LOOP_26_1 
+Execute       schedule -model scale_Pipeline_VITIS_LOOP_26_1 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_23_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_26_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.03 seconds; current allocated memory: 353.121 MB.
-Execute       syn_report -verbosereport -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.verbose.sched.rpt 
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 353.082 MB.
+Execute       syn_report -verbosereport -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.verbose.sched.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       db_write -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.sched.adb -f 
-INFO-FLOW: Finish scheduling scale_Pipeline_VITIS_LOOP_23_1.
-Execute       set_default_model scale_Pipeline_VITIS_LOOP_23_1 
-Execute       bind -model scale_Pipeline_VITIS_LOOP_23_1 
+Execute       db_write -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.sched.adb -f 
+INFO-FLOW: Finish scheduling scale_Pipeline_VITIS_LOOP_26_1.
+Execute       set_default_model scale_Pipeline_VITIS_LOOP_26_1 
+Execute       bind -model scale_Pipeline_VITIS_LOOP_26_1 
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.121 MB.
-Execute       syn_report -verbosereport -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.verbose.bind.rpt 
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.082 MB.
+Execute       syn_report -verbosereport -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.verbose.bind.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       db_write -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.bind.adb -f 
-INFO-FLOW: Finish binding scale_Pipeline_VITIS_LOOP_23_1.
+Execute       db_write -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.bind.adb -f 
+INFO-FLOW: Finish binding scale_Pipeline_VITIS_LOOP_26_1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'scale' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -239,7 +239,7 @@ Execute       set_default_model scale
 Execute       schedule -model scale 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.121 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.082 MB.
 Execute       syn_report -verbosereport -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.verbose.sched.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
@@ -253,7 +253,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.121 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 353.082 MB.
 Execute       syn_report -verbosereport -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.verbose.bind.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
@@ -262,35 +262,35 @@ Execute       db_write -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot
 INFO-FLOW: Finish binding scale.
 Execute       get_model_list scale -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
-Execute       rtl_gen_preprocess scale_Pipeline_VITIS_LOOP_23_1 
+Execute       rtl_gen_preprocess scale_Pipeline_VITIS_LOOP_26_1 
 Execute       rtl_gen_preprocess scale 
-INFO-FLOW: Model list for RTL generation: scale_Pipeline_VITIS_LOOP_23_1 scale
+INFO-FLOW: Model list for RTL generation: scale_Pipeline_VITIS_LOOP_26_1 scale
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'scale_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'scale_Pipeline_VITIS_LOOP_26_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model scale_Pipeline_VITIS_LOOP_23_1 -top_prefix scale_ -sub_prefix scale_ -mg_file /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'scale_Pipeline_VITIS_LOOP_23_1' pipeline 'VITIS_LOOP_23_1' pipeline type 'loop pipeline'
+Execute       create_rtl_model scale_Pipeline_VITIS_LOOP_26_1 -top_prefix scale_ -sub_prefix scale_ -mg_file /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'scale_Pipeline_VITIS_LOOP_26_1' pipeline 'VITIS_LOOP_26_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'scale_Pipeline_VITIS_LOOP_23_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.121 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scale_Pipeline_VITIS_LOOP_26_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 353.082 MB.
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.rtl_wrap.cfg.tcl 
-Execute       gen_rtl scale_Pipeline_VITIS_LOOP_23_1 -style xilinx -f -lang vhdl -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/vhdl/scale_scale_Pipeline_VITIS_LOOP_23_1 
-Execute       gen_rtl scale_Pipeline_VITIS_LOOP_23_1 -style xilinx -f -lang vlog -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/verilog/scale_scale_Pipeline_VITIS_LOOP_23_1 
-Execute       syn_report -csynth -model scale_Pipeline_VITIS_LOOP_23_1 -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/scale_Pipeline_VITIS_LOOP_23_1_csynth.rpt 
+Execute       gen_rtl scale_Pipeline_VITIS_LOOP_26_1 -style xilinx -f -lang vhdl -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/vhdl/scale_scale_Pipeline_VITIS_LOOP_26_1 
+Execute       gen_rtl scale_Pipeline_VITIS_LOOP_26_1 -style xilinx -f -lang vlog -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/verilog/scale_scale_Pipeline_VITIS_LOOP_26_1 
+Execute       syn_report -csynth -model scale_Pipeline_VITIS_LOOP_26_1 -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/scale_Pipeline_VITIS_LOOP_26_1_csynth.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       syn_report -rtlxml -model scale_Pipeline_VITIS_LOOP_23_1 -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/scale_Pipeline_VITIS_LOOP_23_1_csynth.xml 
+Execute       syn_report -rtlxml -model scale_Pipeline_VITIS_LOOP_26_1 -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/report/scale_Pipeline_VITIS_LOOP_26_1_csynth.xml 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       syn_report -verbosereport -model scale_Pipeline_VITIS_LOOP_23_1 -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.verbose.rpt 
+Execute       syn_report -verbosereport -model scale_Pipeline_VITIS_LOOP_26_1 -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.verbose.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       db_write -model scale_Pipeline_VITIS_LOOP_23_1 -f -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.adb 
-Execute       db_write -model scale_Pipeline_VITIS_LOOP_23_1 -bindview -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info scale_Pipeline_VITIS_LOOP_23_1 -p /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1 
+Execute       db_write -model scale_Pipeline_VITIS_LOOP_26_1 -f -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.adb 
+Execute       db_write -model scale_Pipeline_VITIS_LOOP_26_1 -bindview -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info scale_Pipeline_VITIS_LOOP_26_1 -p /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'scale' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -317,7 +317,7 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'scale' to 's_axilite &
 INFO: [RTGEN 206-100] Bundling port 'return', 'scale_factor' and 'height' to AXI-Lite port CTRL.
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'scale'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 353.121 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 353.082 MB.
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.rtl_wrap.cfg.tcl 
 Execute       gen_rtl scale -istop -style xilinx -f -lang vhdl -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/vhdl/scale 
 Execute       gen_rtl scale -istop -style xilinx -f -lang vlog -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/syn/verilog/scale 
@@ -346,9 +346,9 @@ Execute       syn_report -wcfg -model scale -o /home/jeanleo2/yuv_tp/vitis/scale
 Execute       syn_report -protoinst -model scale -o /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.protoinst 
 Execute       sc_get_clocks scale 
 Execute       sc_get_portdomain scale 
-INFO-FLOW: Model list for RTL component generation: scale_Pipeline_VITIS_LOOP_23_1 scale
-INFO-FLOW: Handling components in module [scale_Pipeline_VITIS_LOOP_23_1] ... 
-Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+INFO-FLOW: Model list for RTL component generation: scale_Pipeline_VITIS_LOOP_26_1 scale
+INFO-FLOW: Handling components in module [scale_Pipeline_VITIS_LOOP_26_1] ... 
+Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.compgen.tcl 
 INFO-FLOW: Found component scale_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model scale_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [scale] ... 
@@ -385,10 +385,10 @@ INFO-FLOW: Found component scale_regslice_both.
 INFO-FLOW: Append model scale_regslice_both
 INFO-FLOW: Found component scale_regslice_both.
 INFO-FLOW: Append model scale_regslice_both
-INFO-FLOW: Append model scale_Pipeline_VITIS_LOOP_23_1
+INFO-FLOW: Append model scale_Pipeline_VITIS_LOOP_26_1
 INFO-FLOW: Append model scale
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: scale_flow_control_loop_pipe_sequential_init scale_mul_32s_32s_32_2_1 scale_CTRL_s_axi scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_Pipeline_VITIS_LOOP_23_1 scale
+INFO-FLOW: All models in this session: scale_flow_control_loop_pipe_sequential_init scale_mul_32s_32s_32_2_1 scale_CTRL_s_axi scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_regslice_both scale_Pipeline_VITIS_LOOP_26_1 scale
 INFO-FLOW: Generating /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/autopilot.rtl.models.txt file...
 INFO-FLOW: To file: write model scale_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model scale_mul_32s_32s_32_2_1
@@ -407,7 +407,7 @@ INFO-FLOW: To file: write model scale_regslice_both
 INFO-FLOW: To file: write model scale_regslice_both
 INFO-FLOW: To file: write model scale_regslice_both
 INFO-FLOW: To file: write model scale_regslice_both
-INFO-FLOW: To file: write model scale_Pipeline_VITIS_LOOP_23_1
+INFO-FLOW: To file: write model scale_Pipeline_VITIS_LOOP_26_1
 INFO-FLOW: To file: write model scale
 INFO-FLOW: Generating /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/autopilot.rtl.models.tcl file...
 INFO-FLOW: Finished generating RTL model list.
@@ -454,7 +454,7 @@ scale_regslice_both
 scale_regslice_both
 scale_regslice_both
 scale_regslice_both
-scale_Pipeline_VITIS_LOOP_23_1
+scale_Pipeline_VITIS_LOOP_26_1
 scale
 ' expOnly='0'
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
@@ -462,10 +462,10 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
-Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.compgen.tcl 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.compgen.tcl 
 Execute         source ./CTRL.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 355.629 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 355.527 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='scale_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -493,7 +493,7 @@ scale_regslice_both
 scale_regslice_both
 scale_regslice_both
 scale_regslice_both
-scale_Pipeline_VITIS_LOOP_23_1
+scale_Pipeline_VITIS_LOOP_26_1
 scale
 ' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
@@ -504,7 +504,7 @@ Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/s
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.compgen.dataonly.tcl 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.rtl_wrap.cfg.tcl 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.compgen.dataonly.tcl 
-Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.tbgen.tcl 
+Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.tbgen.tcl 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.tbgen.tcl 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
@@ -512,27 +512,27 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.constraint.tcl 
 Execute       sc_get_clocks scale 
 Execute       source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME CTRL_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME CTRL DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} cache_nodes {} report_dict {TOPINST scale MODULE2INSTS {scale scale scale_Pipeline_VITIS_LOOP_23_1 grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96} INST2MODULE {scale scale grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96 scale_Pipeline_VITIS_LOOP_23_1} INSTDATA {scale {DEPTH 1 CHILDREN grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96} grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96 {DEPTH 2 CHILDREN {}}} MODULEDATA {scale_Pipeline_VITIS_LOOP_23_1 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln23_fu_149_p2 SOURCE /home/jeanleo2/yuv_tp/scale.cpp:23 VARIABLE icmp_ln23 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln23_fu_155_p2 SOURCE /home/jeanleo2/yuv_tp/scale.cpp:23 VARIABLE add_ln23 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true}} AREA {DSP 0 BRAM 0 URAM 0}} scale {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U18 SOURCE /home/jeanleo2/yuv_tp/scale.cpp:21 VARIABLE total_data LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true}} AREA {DSP 3 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME CTRL_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME CTRL DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} cache_nodes {} report_dict {TOPINST scale MODULE2INSTS {scale scale scale_Pipeline_VITIS_LOOP_26_1 grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96} INST2MODULE {scale scale grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96 scale_Pipeline_VITIS_LOOP_26_1} INSTDATA {scale {DEPTH 1 CHILDREN grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96} grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96 {DEPTH 2 CHILDREN {}}} MODULEDATA {scale_Pipeline_VITIS_LOOP_26_1 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln26_fu_143_p2 SOURCE /home/jeanleo2/yuv_tp/scale.cpp:26 VARIABLE icmp_ln26 LOOP VITIS_LOOP_26_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln26_fu_149_p2 SOURCE /home/jeanleo2/yuv_tp/scale.cpp:26 VARIABLE add_ln26 LOOP VITIS_LOOP_26_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true}} AREA {DSP 0 BRAM 0 URAM 0}} scale {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U18 SOURCE /home/jeanleo2/yuv_tp/scale.cpp:24 VARIABLE total_data LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true}} AREA {DSP 3 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 359.578 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 359.484 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for scale.
 INFO: [VLOG 209-307] Generating Verilog RTL for scale.
 Execute       syn_report -model scale -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 144.68 MHz
-Command     autosyn done; 0.45 sec.
-Command   csynth_design done; 8.97 sec.
+Command     autosyn done; 0.42 sec.
+Command   csynth_design done; 8.79 sec.
 Execute   close_project 
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
 Execute     source -notrace -encoding utf-8 /tools/Xilinx/Vitis/2024.2/tps/tcl/tcl8.6/clock.tcl 
 Execute       source -encoding utf-8 /tools/Xilinx/Vitis/2024.2/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
-INFO-FLOW: Workspace /home/jeanleo2/yuv_tp/vitis/scale/scale/hls opened at Wed Jul 23 15:31:29 CEST 2025
+INFO-FLOW: Workspace /home/jeanleo2/yuv_tp/vitis/scale/scale/hls opened at Wed Jul 23 17:09:19 CEST 2025
 Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
 Execute     set_part xc7z020-clg400-1 
 Execute       create_platform xc7z020-clg400-1 -board  
@@ -540,7 +540,7 @@ DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis/2024.2/lib/lnx
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2024.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 0.68 sec.
+Command       create_platform done; 0.65 sec.
 Execute       source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/axi4.gen 
@@ -555,10 +555,10 @@ Execute         source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/dd
 Execute         source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.74 sec.
+Command     set_part done; 0.72 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
-Command   open_solution done; 0.77 sec.
+Command   open_solution done; 0.75 sec.
 Execute   apply_ini /home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg 
 Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=/home/jeanleo2/yuv_tp/scale.cpp' from /home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg(7) 
 INFO: [HLS 200-1465] Applying ini 'syn.file=/home/jeanleo2/yuv_tp/scale.cpp' from /home/jeanleo2/yuv_tp/vitis/scale/hls_config.cfg(7)
@@ -660,7 +660,7 @@ scale_regslice_both
 scale_regslice_both
 scale_regslice_both
 scale_regslice_both
-scale_Pipeline_VITIS_LOOP_23_1
+scale_Pipeline_VITIS_LOOP_26_1
 scale
 ' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
 Execute     source /tools/Xilinx/Vitis/2024.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
@@ -673,7 +673,7 @@ Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/sca
 Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.compgen.dataonly.tcl 
 Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.rtl_wrap.cfg.tcl 
 Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.compgen.dataonly.tcl 
-Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_23_1.tbgen.tcl 
+Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale_Pipeline_VITIS_LOOP_26_1.tbgen.tcl 
 Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.tbgen.tcl 
 Execute     source /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/global.setting.tcl 
 Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
@@ -716,7 +716,7 @@ INFO-FLOW: DBG:PUTS:     IP package: exec /home/jeanleo2/yuv_tp/vitis/scale/scal
 INFO-FLOW: DBG:PUTS:     IP package: success /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/impl/ip/pack.sh
 Execute     send_msg_by_id INFO @200-802@%s scale/scale.zip 
 INFO: [HLS 200-802] Generated output file scale/scale.zip
-Command   export_design done; 15.39 sec.
+Command   export_design done; 14.7 sec.
 Execute   close_project 
 Execute     close_solution 
 Execute       cleanup_all 

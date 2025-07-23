@@ -238,7 +238,7 @@ set NewPortList {[
  	{ "name": "ch_b_TDEST", "direction": "out", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "ch_b_V_dest_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "torgb_Pipeline_VITIS_LOOP_24_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -310,13 +310,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "ch_b_V_dest_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "ch_b"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_24_1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter9", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter9", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_34ns_65_2_1_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_34ns_65_2_1_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_34ns_65_2_1_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_17s_32_2_1_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_17s_32_2_1_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -343,27 +338,27 @@ set ArgLastReadFirstWriteLatency {
 		ch_v_V_last_V {Type I LastRead 1 FirstWrite -1}
 		ch_v_V_id_V {Type I LastRead 1 FirstWrite -1}
 		ch_v_V_dest_V {Type I LastRead 1 FirstWrite -1}
-		ch_r_V_data_V {Type O LastRead -1 FirstWrite 9}
-		ch_r_V_keep_V {Type O LastRead -1 FirstWrite 9}
-		ch_r_V_strb_V {Type O LastRead -1 FirstWrite 9}
-		ch_r_V_user_V {Type O LastRead -1 FirstWrite 9}
-		ch_r_V_last_V {Type O LastRead -1 FirstWrite 9}
-		ch_r_V_id_V {Type O LastRead -1 FirstWrite 9}
-		ch_r_V_dest_V {Type O LastRead -1 FirstWrite 9}
-		ch_g_V_data_V {Type O LastRead -1 FirstWrite 9}
-		ch_g_V_keep_V {Type O LastRead -1 FirstWrite 9}
-		ch_g_V_strb_V {Type O LastRead -1 FirstWrite 9}
-		ch_g_V_user_V {Type O LastRead -1 FirstWrite 9}
-		ch_g_V_last_V {Type O LastRead -1 FirstWrite 9}
-		ch_g_V_id_V {Type O LastRead -1 FirstWrite 9}
-		ch_g_V_dest_V {Type O LastRead -1 FirstWrite 9}
-		ch_b_V_data_V {Type O LastRead -1 FirstWrite 9}
-		ch_b_V_keep_V {Type O LastRead -1 FirstWrite 9}
-		ch_b_V_strb_V {Type O LastRead -1 FirstWrite 9}
-		ch_b_V_user_V {Type O LastRead -1 FirstWrite 9}
-		ch_b_V_last_V {Type O LastRead -1 FirstWrite 9}
-		ch_b_V_id_V {Type O LastRead -1 FirstWrite 9}
-		ch_b_V_dest_V {Type O LastRead -1 FirstWrite 9}}}
+		ch_r_V_data_V {Type O LastRead -1 FirstWrite 1}
+		ch_r_V_keep_V {Type O LastRead -1 FirstWrite 1}
+		ch_r_V_strb_V {Type O LastRead -1 FirstWrite 1}
+		ch_r_V_user_V {Type O LastRead -1 FirstWrite 1}
+		ch_r_V_last_V {Type O LastRead -1 FirstWrite 1}
+		ch_r_V_id_V {Type O LastRead -1 FirstWrite 1}
+		ch_r_V_dest_V {Type O LastRead -1 FirstWrite 1}
+		ch_g_V_data_V {Type O LastRead -1 FirstWrite 1}
+		ch_g_V_keep_V {Type O LastRead -1 FirstWrite 1}
+		ch_g_V_strb_V {Type O LastRead -1 FirstWrite 1}
+		ch_g_V_user_V {Type O LastRead -1 FirstWrite 1}
+		ch_g_V_last_V {Type O LastRead -1 FirstWrite 1}
+		ch_g_V_id_V {Type O LastRead -1 FirstWrite 1}
+		ch_g_V_dest_V {Type O LastRead -1 FirstWrite 1}
+		ch_b_V_data_V {Type O LastRead -1 FirstWrite 1}
+		ch_b_V_keep_V {Type O LastRead -1 FirstWrite 1}
+		ch_b_V_strb_V {Type O LastRead -1 FirstWrite 1}
+		ch_b_V_user_V {Type O LastRead -1 FirstWrite 1}
+		ch_b_V_last_V {Type O LastRead -1 FirstWrite 1}
+		ch_b_V_id_V {Type O LastRead -1 FirstWrite 1}
+		ch_b_V_dest_V {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 

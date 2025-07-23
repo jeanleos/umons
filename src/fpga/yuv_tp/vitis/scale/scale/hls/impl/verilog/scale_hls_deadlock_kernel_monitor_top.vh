@@ -10,13 +10,13 @@ wire [1:0] inst_idle_sigs;
 wire [0:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96.ch_in_TDATA_blk_n;
-assign axis_block_sigs[1] = ~grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96.ch_out_TDATA_blk_n;
+assign axis_block_sigs[0] = ~grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96.ch_in_TDATA_blk_n;
+assign axis_block_sigs[1] = ~grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96.ch_out_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 
 assign inst_idle_sigs[0] = 1'b0;
-assign inst_idle_sigs[1] = grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96.ap_idle;
+assign inst_idle_sigs[1] = grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96.ap_idle;
 
 scale_hls_deadlock_idx0_monitor scale_hls_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

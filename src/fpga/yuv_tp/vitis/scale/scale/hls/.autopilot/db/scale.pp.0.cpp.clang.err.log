@@ -1,22 +1,22 @@
 directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=name=scale_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=scale
         ^
-/home/jeanleo2/yuv_tp/scale.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=axis port=ch_in_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/jeanleo2/yuv_tp/scale.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=axis port=ch_in_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE axis port=ch_in
         ^
-/home/jeanleo2/yuv_tp/scale.cpp:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=axis port=ch_out_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/jeanleo2/yuv_tp/scale.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=axis port=ch_out_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE axis port=ch_out
         ^
-/home/jeanleo2/yuv_tp/scale.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=width bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/jeanleo2/yuv_tp/scale.cpp:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=width bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite port=width bundle=CTRL
         ^
-/home/jeanleo2/yuv_tp/scale.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=height bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/jeanleo2/yuv_tp/scale.cpp:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=height bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite port=height bundle=CTRL
         ^
-/home/jeanleo2/yuv_tp/scale.cpp:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=scale_factor bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/jeanleo2/yuv_tp/scale.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=scale_factor bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite port=scale_factor bundle=CTRL
         ^
-/home/jeanleo2/yuv_tp/scale.cpp:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/jeanleo2/yuv_tp/scale.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=scale_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
         ^
 7 warnings generated.

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul 23 16:27:27 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul 23 17:11:26 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -7150,6 +7150,15 @@
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=processing_system7;v=v5_3;d=pg082-processing-system7.pdf"/>
       </DOCUMENTS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_HP0" NAME="HP0_DDR_LOWOCM" RANGE="536870912" USAGE="memory"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_HP0" NAME="HP0_DDR_LOWOCM" RANGE="536870912" USAGE="memory"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_HP0" NAME="HP0_DDR_LOWOCM" RANGE="536870912" USAGE="memory"/>
+      </ADDRESSBLOCKS>
       <PARAMETERS>
         <PARAMETER NAME="C_DM_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_DQS_WIDTH" VALUE="4"/>
@@ -8183,10 +8192,6 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axi_dma_1" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="axi_dma_2" PORT="s_axi_lite_aclk"/>
-            <CONNECTION INSTANCE="scale_0" PORT="ap_clk"/>
-            <CONNECTION INSTANCE="scale_1" PORT="ap_clk"/>
-            <CONNECTION INSTANCE="scale_2" PORT="ap_clk"/>
-            <CONNECTION INSTANCE="torgb_0" PORT="ap_clk"/>
             <CONNECTION INSTANCE="toyuv_0" PORT="ap_clk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_mm2s_aclk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_s2mm_aclk"/>
@@ -8206,6 +8211,10 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S06_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S07_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S08_ACLK"/>
+            <CONNECTION INSTANCE="scale_0" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="scale_1" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="scale_2" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="torgb_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -8900,10 +8909,6 @@
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_dma_1" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="axi_dma_2" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="scale_0" PORT="ap_rst_n"/>
-            <CONNECTION INSTANCE="scale_1" PORT="ap_rst_n"/>
-            <CONNECTION INSTANCE="scale_2" PORT="ap_rst_n"/>
-            <CONNECTION INSTANCE="torgb_0" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="toyuv_0" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ARESETN"/>
@@ -8916,6 +8921,10 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S06_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S07_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S08_ARESETN"/>
+            <CONNECTION INSTANCE="scale_0" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="scale_1" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="scale_2" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="torgb_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -8927,7 +8936,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2114183791" FULLNAME="/scale_0" HWVERSION="1.0" INSTANCE="scale_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="scale" VLNV="xilinx.com:hls:scale:1.0">
+    <MODULE COREREVISION="2114183889" FULLNAME="/scale_0" HWVERSION="1.0" INSTANCE="scale_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="scale" VLNV="xilinx.com:hls:scale:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_CTRL" NAME="Reg" RANGE="65536" USAGE="register">
@@ -9533,7 +9542,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2114183791" FULLNAME="/scale_1" HWVERSION="1.0" INSTANCE="scale_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="scale" VLNV="xilinx.com:hls:scale:1.0">
+    <MODULE COREREVISION="2114183889" FULLNAME="/scale_1" HWVERSION="1.0" INSTANCE="scale_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="scale" VLNV="xilinx.com:hls:scale:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_CTRL" NAME="Reg" RANGE="65536" USAGE="register">
@@ -10139,7 +10148,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2114183791" FULLNAME="/scale_2" HWVERSION="1.0" INSTANCE="scale_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="scale" VLNV="xilinx.com:hls:scale:1.0">
+    <MODULE COREREVISION="2114183889" FULLNAME="/scale_2" HWVERSION="1.0" INSTANCE="scale_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="scale" VLNV="xilinx.com:hls:scale:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_CTRL" NAME="Reg" RANGE="65536" USAGE="register">
@@ -10745,7 +10754,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2114183792" FULLNAME="/torgb_0" HWVERSION="1.0" INSTANCE="torgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="torgb" VLNV="xilinx.com:hls:torgb:1.0">
+    <MODULE COREREVISION="2114183888" FULLNAME="/torgb_0" HWVERSION="1.0" INSTANCE="torgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="torgb" VLNV="xilinx.com:hls:torgb:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_control" NAME="Reg" RANGE="65536" USAGE="register">

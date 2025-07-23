@@ -38,12 +38,12 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1248_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_23_1:  '
-    FileOffset:      23
+    Message:         'Added loop label VITIS_LOOP_26_1:  '
+    FileOffset:      26
     FilePath:        /home/jeanleo2/yuv_tp/scale.cpp
     Replacements:    
       - FilePath:        /home/jeanleo2/yuv_tp/vitis/scale/scale/hls/.autopilot/db/scale.pp.0.cpp
-        Offset:          1026041
+        Offset:          1026044
         Length:          0
-        ReplacementText: 'VITIS_LOOP_23_1: '
+        ReplacementText: 'VITIS_LOOP_26_1: '
 ...

@@ -1743,7 +1743,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>total</originalName>
-              <rtlName>mul_32s_32s_32_2_1_U51</rtlName>
+              <rtlName>mul_32s_32s_32_2_1_U44</rtlName>
               <control>auto</control>
               <opType>mul</opType>
               <implIndex>auto</implIndex>
@@ -1865,7 +1865,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>4.88</m_delay>
+          <m_delay>4.14</m_delay>
           <m_topoIndex>4</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -1874,10 +1874,10 @@
             <Obj>
               <type>0</type>
               <id>112</id>
-              <name>_ln49</name>
+              <name>_ln53</name>
               <fileName>/home/jeanleo2/yuv_tp/torgb.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
-              <lineNumber>49</lineNumber>
+              <lineNumber>53</lineNumber>
               <contextFuncName>torgb</contextFuncName>
               <contextNormFuncName>torgb</contextNormFuncName>
               <inlineStackInfo>
@@ -1893,7 +1893,7 @@
                         <first>/home/jeanleo2/yuv_tp/torgb.cpp</first>
                         <second>torgb</second>
                       </first>
-                      <second>49</second>
+                      <second>53</second>
                     </item>
                   </second>
                 </item>
@@ -2909,24 +2909,20 @@
         <item>
           <first>grp_torgb_Pipeline_VITIS_LOOP_24_1_fu_150 (torgb_Pipeline_VITIS_LOOP_24_1)</first>
           <second>
-            <count>3</count>
+            <count>2</count>
             <item_version>0</item_version>
             <item>
-              <first>DSP</first>
-              <second>16</second>
-            </item>
-            <item>
               <first>FF</first>
-              <second>3275</second>
+              <second>37</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>2166</second>
+              <second>183</second>
             </item>
           </second>
         </item>
         <item>
-          <first>mul_32s_32s_32_2_1_U51 (mul_32s_32s_32_2_1)</first>
+          <first>mul_32s_32s_32_2_1_U44 (mul_32s_32s_32_2_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4538,7 +4534,7 @@
           </second>
         </item>
         <item>
-          <first>mul_32s_32s_32_2_1_U51</first>
+          <first>mul_32s_32s_32_2_1_U44</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -4851,7 +4847,7 @@
           </second>
         </item>
         <item>
-          <first>mul_32s_32s_32_2_1_U51 (mul_32s_32s_32_2_1)</first>
+          <first>mul_32s_32s_32_2_1_U44 (mul_32s_32s_32_2_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

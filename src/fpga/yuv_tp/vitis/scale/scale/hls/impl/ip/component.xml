@@ -833,7 +833,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>21d589c6</spirit:value>
+            <spirit:value>38a4acd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -849,7 +849,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>89a4165c</spirit:value>
+            <spirit:value>0b3f4882</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -865,7 +865,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a7e03c19</spirit:value>
+            <spirit:value>cbb7398a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -881,7 +881,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>93abb44e</spirit:value>
+            <spirit:value>e62e5783</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1596,7 +1596,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/scale_scale_Pipeline_VITIS_LOOP_23_1.v</spirit:name>
+        <spirit:name>hdl/verilog/scale_scale_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1642,7 +1642,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/scale_scale_Pipeline_VITIS_LOOP_23_1.v</spirit:name>
+        <spirit:name>hdl/verilog/scale_scale_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1676,13 +1676,13 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/scale_scale_Pipeline_VITIS_LOOP_23_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/scale_scale_Pipeline_VITIS_LOOP_26_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/scale.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_abfeeee2</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_0e257b14</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1708,7 +1708,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/scale_scale_Pipeline_VITIS_LOOP_23_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/scale_scale_Pipeline_VITIS_LOOP_26_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1830,8 +1830,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Scale</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114183791</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-07-23T13:31:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114183889</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-07-23T15:09:25Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -1841,7 +1841,7 @@
       <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5b2af8e6"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="6a1bf01d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="047c345d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4c159216"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a635c643"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="9f3463c0"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="7f96898f"/>

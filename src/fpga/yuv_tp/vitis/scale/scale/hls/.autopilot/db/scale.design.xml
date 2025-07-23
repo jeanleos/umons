@@ -5,8 +5,8 @@
 <ModuleName>scale</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_scale_Pipeline_VITIS_LOOP_23_1_fu_96</InstName>
-<ModuleName>scale_Pipeline_VITIS_LOOP_23_1</ModuleName>
+<InstName>grp_scale_Pipeline_VITIS_LOOP_26_1_fu_96</InstName>
+<ModuleName>scale_Pipeline_VITIS_LOOP_26_1</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>96</ID>
 </Instance>
@@ -16,9 +16,9 @@
 
 <ModuleInformation>
 <Module>
-<Name>scale_Pipeline_VITIS_LOOP_23_1</Name>
+<Name>scale_Pipeline_VITIS_LOOP_26_1</Name>
 <Loops>
-<VITIS_LOOP_23_1></VITIS_LOOP_23_1>
+<VITIS_LOOP_26_1></VITIS_LOOP_26_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -37,8 +37,8 @@
 <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_23_1>
-<Name>VITIS_LOOP_23_1</Name>
+<VITIS_LOOP_26_1>
+<Name>VITIS_LOOP_26_1</Name>
 <Slack>7.30</Slack>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
@@ -48,25 +48,25 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_23_1>
+</VITIS_LOOP_26_1>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:23</SourceLocation>
+<SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:26</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_23_1>
-<Name>VITIS_LOOP_23_1</Name>
+<VITIS_LOOP_26_1>
+<Name>VITIS_LOOP_26_1</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:23</SourceLocation>
-</VITIS_LOOP_23_1>
+<SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:26</SourceLocation>
+</VITIS_LOOP_26_1>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>503</FF>
+<FF>510</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
 <LUT>329</LUT>
@@ -86,7 +86,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -97,7 +97,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -108,7 +108,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -119,7 +119,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -130,7 +130,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -141,7 +141,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -152,7 +152,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_130_p_din0</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -163,7 +163,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_130_p_din1</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -174,7 +174,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_130_p_dout0</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -185,7 +185,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_130_p_ce</name>
-<Object>scale_Pipeline_VITIS_LOOP_23_1</Object>
+<Object>scale_Pipeline_VITIS_LOOP_26_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -437,7 +437,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:9</SourceLocation>
+<SourceLocation>/home/jeanleo2/yuv_tp/scale.cpp:12</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -448,7 +448,7 @@
 <DSP>3</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>1039</FF>
+<FF>1046</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
 <LUT>823</LUT>

@@ -9004,13 +9004,16 @@ private:
 
 typedef ap_axis<32, 2, 5, 6> data_t;
 
+
+
+
 __attribute__((sdx_kernel("scale", 0))) int scale(
     int scale_factor, int width, int height,
     hls::stream<data_t> &ch_in, hls::stream<data_t> &ch_out
 ) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=scale
-# 12 "/home/jeanleo2/yuv_tp/scale.cpp"
+# 15 "/home/jeanleo2/yuv_tp/scale.cpp"
 
 #pragma HLS INTERFACE axis port=ch_in
 #pragma HLS INTERFACE axis port=ch_out
@@ -9022,13 +9025,13 @@ __attribute__((sdx_kernel("scale", 0))) int scale(
 
  int total_data = width * height;
 
-    VITIS_LOOP_23_1: for (int i = 0; i < total_data; i++) {
+    VITIS_LOOP_26_1: for (int i = 0; i < total_data; i++) {
         data_t _tmp;
         int tmp, tmp_out;
 
         ch_in.read(_tmp);
         tmp = _tmp.data.to_int();
-        tmp_out = (tmp * scale_factor) >> 7;
+        tmp_out = tmp * scale_factor;
 
         _tmp.data = tmp_out;
         ch_out.write(_tmp);
