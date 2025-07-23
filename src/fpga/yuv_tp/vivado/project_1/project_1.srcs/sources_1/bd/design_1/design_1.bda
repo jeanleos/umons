@@ -190,6 +190,114 @@
             },
             "V3": {
                 "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_MM2S",
+                "MX": "/axi_dma_0",
+                "MI": "M_AXI_MM2S",
+                "MS": "SEG_processing_system7_0_HP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V4": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_S2MM",
+                "MX": "/axi_dma_0",
+                "MI": "M_AXI_S2MM",
+                "MS": "SEG_processing_system7_0_HP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V5": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_MM2S",
+                "MX": "/axi_dma_1",
+                "MI": "M_AXI_MM2S",
+                "MS": "SEG_processing_system7_0_HP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V6": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_S2MM",
+                "MX": "/axi_dma_1",
+                "MI": "M_AXI_S2MM",
+                "MS": "SEG_processing_system7_0_HP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V7": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_MM2S",
+                "MX": "/axi_dma_2",
+                "MI": "M_AXI_MM2S",
+                "MS": "SEG_processing_system7_0_HP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V8": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_S2MM",
+                "MX": "/axi_dma_2",
+                "MI": "M_AXI_S2MM",
+                "MS": "SEG_processing_system7_0_HP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_HP0",
+                "SS": "HP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V9": {
+                "VT": "AC",
                 "BA": "0x40000000",
                 "HA": "0x4000FFFF",
                 "BP": "C_S_AXI_CTRL_BASEADDR",
@@ -206,7 +314,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V4": {
+            "V10": {
                 "VT": "AC",
                 "BA": "0x40010000",
                 "HA": "0x4001FFFF",
@@ -224,7 +332,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V5": {
+            "V11": {
                 "VT": "AC",
                 "BA": "0x40020000",
                 "HA": "0x4002FFFF",
@@ -242,7 +350,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V6": {
+            "V12": {
                 "VT": "AC",
                 "BA": "0x40030000",
                 "HA": "0x4003FFFF",
@@ -260,7 +368,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V7": {
+            "V13": {
                 "VT": "AC",
                 "BA": "0x40040000",
                 "HA": "0x4004FFFF",
@@ -278,7 +386,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V8": {
+            "V14": {
                 "VT": "AC",
                 "BA": "0x41E00000",
                 "HA": "0x41E0FFFF",
@@ -296,7 +404,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V9": {
+            "V15": {
                 "VT": "AC",
                 "BA": "0x41E10000",
                 "HA": "0x41E1FFFF",
@@ -314,7 +422,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V10": {
+            "V16": {
                 "VT": "AC",
                 "BA": "0x41E20000",
                 "HA": "0x41E2FFFF",
@@ -379,6 +487,36 @@
             },
             {
                 "src": "V10",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V11",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V12",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V13",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V14",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V15",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V16",
                 "trg": "V2",
                 "EH": "2"
             }
