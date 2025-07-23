@@ -24,7 +24,7 @@ To run all the parts, it is necessary to have the followings:
 
 ## Steps
 
-- Familiarising with the FPGA toolchain: `/src/fpga` (Matrix coefficients sum & RGB to YUV conversion)
+- Familiarising with the FPGA toolchain: `/src/fpga` (Simple sum, Matrix coefficients sum, RGB to YUV conversion, Full lab for YUV conversion)
 - Deep learning familiarisation: `/src/deep_learning` (Divisibility by 3 & Matrix determinant approximation)
 - U-Net depth estimation deep learning model: `/src/u-net_depth_estimation` (Quantised depth estimation model)
 - Using hls4ml to deploy a reduced size model on the Pynq-Z2: `/src/hls4ml` (Reduced model on the Pynq-Z2)
