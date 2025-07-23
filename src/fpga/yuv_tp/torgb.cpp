@@ -33,9 +33,9 @@ int torgb(int width, int height,
         u = _u.data.to_int();
         v = _v.data.to_int();
 
-        r = (int) (y + 113983 * v) / 100000;
-        g = (int) (y - 39465 * u - 58060 * v) / 100000;
-        b = (int) (y + 203211 * u) / 100000;
+        r = (int) (100000 * y + 113983 * v) / 100000;
+        g = (int) (100000 * y - 39465 * u - 58060 * v) / 100000;
+        b = (int) (100000 * y + 203211 * u) / 100000;
 
         r = max(min(r, 0), 255);
         g = max(min(g, 0), 255);

@@ -4,7 +4,7 @@
     "calls": "",
     "file": "torgb.cpp",
     "fileloc": 9,
-    "instructions": 225,
+    "instructions": 226,
     "loads": {
       "L": 21
     },
@@ -12,6 +12,6 @@
     "stores": {
       "L": 21
     },
-    "total_instructions": 225
+    "total_instructions": 226
   }
 }

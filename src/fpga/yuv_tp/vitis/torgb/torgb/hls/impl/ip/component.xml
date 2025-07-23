@@ -2815,8 +2815,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Torgb</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114183888</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-07-23T15:08:52Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114183905</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-07-23T15:25:45Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>

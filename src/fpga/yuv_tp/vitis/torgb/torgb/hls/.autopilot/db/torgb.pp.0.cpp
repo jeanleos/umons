@@ -9035,9 +9035,9 @@ __attribute__((sdx_kernel("torgb", 0))) int torgb(int width, int height,
         u = _u.data.to_int();
         v = _v.data.to_int();
 
-        r = (int) (y + 113983 * v) / 100000;
-        g = (int) (y - 39465 * u - 58060 * v) / 100000;
-        b = (int) (y + 203211 * u) / 100000;
+        r = (int) (100000 * y + 113983 * v) / 100000;
+        g = (int) (100000 * y - 39465 * u - 58060 * v) / 100000;
+        b = (int) (100000 * y + 203211 * u) / 100000;
 
         r = ({ __typeof__ (({ __typeof__ (r) _a = (r); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })) _a = (({ __typeof__ (r) _a = (r); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })); __typeof__ (255) _b = (255); _a > _b ? _a : _b; });
         g = ({ __typeof__ (({ __typeof__ (g) _a = (g); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })) _a = (({ __typeof__ (g) _a = (g); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })); __typeof__ (255) _b = (255); _a > _b ? _a : _b; });

@@ -32,3 +32,12 @@
 17:08:04 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jeanleo2190382987100673163 -r /tmp/rigel_lopper_jeanleo22573623472797690769/.repo.yaml && deactivate
 17:08:05 INFO  : Embedded Template List generated successfully
 17:08:09 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+17:24:45 INFO  : updated workspace path: 
+17:24:46 INFO  : Successfully created repository data at /tmp/rigel_lopper_jeanleo210005247078579555612
+17:24:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jeanleo28898549884604656182 -r /tmp/rigel_lopper_jeanleo210005247078579555612/.repo.yaml && deactivate
+17:24:46 INFO  : Embedded Template List generated successfully
+17:24:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+17:24:47 INFO  : Successfully created repository data at /tmp/rigel_lopper_jeanleo212100139738360101193
+17:24:47 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jeanleo212663391817827394709 -r /tmp/rigel_lopper_jeanleo212100139738360101193/.repo.yaml && deactivate
+17:24:47 INFO  : Embedded Template List generated successfully
+17:24:53 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
