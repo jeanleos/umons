@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.912</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.239</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -41,9 +41,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
-<DSP>3</DSP>
-<FF>611</FF>
-<LUT>726</LUT>
+<DSP>19</DSP>
+<FF>3902</FF>
+<LUT>2992</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

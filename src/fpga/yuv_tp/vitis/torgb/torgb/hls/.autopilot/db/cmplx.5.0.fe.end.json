@@ -3,8 +3,8 @@
         "name": "torgb_Pipeline_VITIS_LOOP_24_1",
         "file": "\/home\/jeanleo2\/yuv_tp\/torgb.cpp",
         "fileloc": "24",
-        "instructions": "50",
-        "total_instructions": "50",
+        "instructions": "153",
+        "total_instructions": "153",
         "calls": "",
         "basicblocks": "4",
         "loads": {
@@ -22,7 +22,7 @@
         "file": "torgb.cpp",
         "fileloc": "9",
         "instructions": "68",
-        "total_instructions": "118",
+        "total_instructions": "221",
         "calls": "1",
         "basicblocks": "1"
     }

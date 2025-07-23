@@ -4,7 +4,7 @@
     "xci_name": "design_1_torgb_0_1",
     "cell_name": "torgb_0",
     "component_reference": "xilinx.com:hls:torgb:1.0",
-    "ip_revision": "2114183905",
+    "ip_revision": "2114183978",
     "gen_directory": "../../../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_torgb_0_1",
     "parameters": {
       "component_parameters": {
@@ -34,7 +34,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2114183905" } ],
+        "IPREVISION": [ { "value": "2114183978" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../project_1.gen/sources_1/bd/design_1/ip/design_1_torgb_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

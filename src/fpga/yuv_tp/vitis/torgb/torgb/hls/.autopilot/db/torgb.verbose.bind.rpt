@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'torgb'
 ================================================================
-* Date:           Wed Jul 23 17:25:31 2025
+* Date:           Wed Jul 23 18:36:07 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        torgb
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.239 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -97,8 +97,8 @@ ST_3 : Operation 10 [1/2] (6.91ns)   --->   "%total = mul i32 %height_read, i32 
 State 4 <SV = 3> <Delay = 4.14>
 ST_4 : Operation 11 [2/2] (4.14ns)   --->   "%call_ln23 = call void @torgb_Pipeline_VITIS_LOOP_24_1, i32 %total, i32 %ch_y_V_data_V, i4 %ch_y_V_keep_V, i4 %ch_y_V_strb_V, i2 %ch_y_V_user_V, i1 %ch_y_V_last_V, i5 %ch_y_V_id_V, i6 %ch_y_V_dest_V, i32 %ch_u_V_data_V, i4 %ch_u_V_keep_V, i4 %ch_u_V_strb_V, i2 %ch_u_V_user_V, i1 %ch_u_V_last_V, i5 %ch_u_V_id_V, i6 %ch_u_V_dest_V, i32 %ch_v_V_data_V, i4 %ch_v_V_keep_V, i4 %ch_v_V_strb_V, i2 %ch_v_V_user_V, i1 %ch_v_V_last_V, i5 %ch_v_V_id_V, i6 %ch_v_V_dest_V, i32 %ch_r_V_data_V, i4 %ch_r_V_keep_V, i4 %ch_r_V_strb_V, i2 %ch_r_V_user_V, i1 %ch_r_V_last_V, i5 %ch_r_V_id_V, i6 %ch_r_V_dest_V, i32 %ch_g_V_data_V, i4 %ch_g_V_keep_V, i4 %ch_g_V_strb_V, i2 %ch_g_V_user_V, i1 %ch_g_V_last_V, i5 %ch_g_V_id_V, i6 %ch_g_V_dest_V, i32 %ch_b_V_data_V, i4 %ch_b_V_keep_V, i4 %ch_b_V_strb_V, i2 %ch_b_V_user_V, i1 %ch_b_V_last_V, i5 %ch_b_V_id_V, i6 %ch_b_V_dest_V" [/home/jeanleo2/yuv_tp/torgb.cpp:23]   --->   Operation 11 'call' 'call_ln23' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Generic Core
 
-State 5 <SV = 4> <Delay = 5.72>
-ST_5 : Operation 12 [1/2] (5.72ns)   --->   "%call_ln23 = call void @torgb_Pipeline_VITIS_LOOP_24_1, i32 %total, i32 %ch_y_V_data_V, i4 %ch_y_V_keep_V, i4 %ch_y_V_strb_V, i2 %ch_y_V_user_V, i1 %ch_y_V_last_V, i5 %ch_y_V_id_V, i6 %ch_y_V_dest_V, i32 %ch_u_V_data_V, i4 %ch_u_V_keep_V, i4 %ch_u_V_strb_V, i2 %ch_u_V_user_V, i1 %ch_u_V_last_V, i5 %ch_u_V_id_V, i6 %ch_u_V_dest_V, i32 %ch_v_V_data_V, i4 %ch_v_V_keep_V, i4 %ch_v_V_strb_V, i2 %ch_v_V_user_V, i1 %ch_v_V_last_V, i5 %ch_v_V_id_V, i6 %ch_v_V_dest_V, i32 %ch_r_V_data_V, i4 %ch_r_V_keep_V, i4 %ch_r_V_strb_V, i2 %ch_r_V_user_V, i1 %ch_r_V_last_V, i5 %ch_r_V_id_V, i6 %ch_r_V_dest_V, i32 %ch_g_V_data_V, i4 %ch_g_V_keep_V, i4 %ch_g_V_strb_V, i2 %ch_g_V_user_V, i1 %ch_g_V_last_V, i5 %ch_g_V_id_V, i6 %ch_g_V_dest_V, i32 %ch_b_V_data_V, i4 %ch_b_V_keep_V, i4 %ch_b_V_strb_V, i2 %ch_b_V_user_V, i1 %ch_b_V_last_V, i5 %ch_b_V_id_V, i6 %ch_b_V_dest_V" [/home/jeanleo2/yuv_tp/torgb.cpp:23]   --->   Operation 12 'call' 'call_ln23' <Predicate = true> <Delay = 5.72> <CoreType = "Generic">   --->   Generic Core
+State 5 <SV = 4> <Delay = 7.23>
+ST_5 : Operation 12 [1/2] (7.23ns)   --->   "%call_ln23 = call void @torgb_Pipeline_VITIS_LOOP_24_1, i32 %total, i32 %ch_y_V_data_V, i4 %ch_y_V_keep_V, i4 %ch_y_V_strb_V, i2 %ch_y_V_user_V, i1 %ch_y_V_last_V, i5 %ch_y_V_id_V, i6 %ch_y_V_dest_V, i32 %ch_u_V_data_V, i4 %ch_u_V_keep_V, i4 %ch_u_V_strb_V, i2 %ch_u_V_user_V, i1 %ch_u_V_last_V, i5 %ch_u_V_id_V, i6 %ch_u_V_dest_V, i32 %ch_v_V_data_V, i4 %ch_v_V_keep_V, i4 %ch_v_V_strb_V, i2 %ch_v_V_user_V, i1 %ch_v_V_last_V, i5 %ch_v_V_id_V, i6 %ch_v_V_dest_V, i32 %ch_r_V_data_V, i4 %ch_r_V_keep_V, i4 %ch_r_V_strb_V, i2 %ch_r_V_user_V, i1 %ch_r_V_last_V, i5 %ch_r_V_id_V, i6 %ch_r_V_dest_V, i32 %ch_g_V_data_V, i4 %ch_g_V_keep_V, i4 %ch_g_V_strb_V, i2 %ch_g_V_user_V, i1 %ch_g_V_last_V, i5 %ch_g_V_id_V, i6 %ch_g_V_dest_V, i32 %ch_b_V_data_V, i4 %ch_b_V_keep_V, i4 %ch_b_V_strb_V, i2 %ch_b_V_user_V, i1 %ch_b_V_last_V, i5 %ch_b_V_id_V, i6 %ch_b_V_dest_V" [/home/jeanleo2/yuv_tp/torgb.cpp:23]   --->   Operation 12 'call' 'call_ln23' <Predicate = true> <Delay = 7.23> <CoreType = "Generic">   --->   Generic Core
 
 State 6 <SV = 5> <Delay = 0.00>
 ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 0"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
@@ -1217,18 +1217,18 @@ ret_ln53                 (ret                ) [ 0000000]
 ============================================================
 
 * Functional unit list:
-|----------|-------------------------------------------|---------|---------|---------|
-| Operation|              Functional Unit              |   DSP   |    FF   |   LUT   |
-|----------|-------------------------------------------|---------|---------|---------|
-|    mul   |                 grp_fu_239                |    3    |   165   |    50   |
-|----------|-------------------------------------------|---------|---------|---------|
-|   call   | grp_torgb_Pipeline_VITIS_LOOP_24_1_fu_150 |    0    |    31   |    77   |
-|----------|-------------------------------------------|---------|---------|---------|
-|   read   |          height_read_read_fu_138          |    0    |    0    |    0    |
-|          |           width_read_read_fu_144          |    0    |    0    |    0    |
-|----------|-------------------------------------------|---------|---------|---------|
-|   Total  |                                           |    3    |   196   |   127   |
-|----------|-------------------------------------------|---------|---------|---------|
+|----------|-------------------------------------------|---------|---------|---------|---------|
+| Operation|              Functional Unit              |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|   call   | grp_torgb_Pipeline_VITIS_LOOP_24_1_fu_150 |    16   |  4.764  |   1969  |   1633  |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|    mul   |                 grp_fu_239                |    3    |    0    |   165   |    50   |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|   read   |          height_read_read_fu_138          |    0    |    0    |    0    |    0    |
+|          |           width_read_read_fu_144          |    0    |    0    |    0    |    0    |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                           |    19   |  4.764  |   2134  |   1683  |
+|----------|-------------------------------------------|---------|---------|---------|---------|
 
 Memories:
 N/A
@@ -1254,13 +1254,13 @@ N/A
 
 
 * Summary:
-+-----------+--------+--------+--------+
-|           |   DSP  |   FF   |   LUT  |
-+-----------+--------+--------+--------+
-|  Function |    3   |   196  |   127  |
-|   Memory  |    -   |    -   |    -   |
-|Multiplexer|    -   |    -   |    -   |
-|  Register |    -   |   96   |    -   |
-+-----------+--------+--------+--------+
-|   Total   |    3   |   292  |   127  |
-+-----------+--------+--------+--------+
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   19   |    4   |  2134  |  1683  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |   96   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   19   |    4   |  2230  |  1683  |
++-----------+--------+--------+--------+--------+

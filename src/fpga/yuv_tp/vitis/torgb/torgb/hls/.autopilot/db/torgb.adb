@@ -1743,7 +1743,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>total</originalName>
-              <rtlName>mul_32s_32s_32_2_1_U44</rtlName>
+              <rtlName>mul_32s_32s_32_2_1_U51</rtlName>
               <control>auto</control>
               <opType>mul</opType>
               <implIndex>auto</implIndex>
@@ -2909,20 +2909,24 @@
         <item>
           <first>grp_torgb_Pipeline_VITIS_LOOP_24_1_fu_150 (torgb_Pipeline_VITIS_LOOP_24_1)</first>
           <second>
-            <count>2</count>
+            <count>3</count>
             <item_version>0</item_version>
             <item>
+              <first>DSP</first>
+              <second>16</second>
+            </item>
+            <item>
               <first>FF</first>
-              <second>37</second>
+              <second>3328</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>183</second>
+              <second>2449</second>
             </item>
           </second>
         </item>
         <item>
-          <first>mul_32s_32s_32_2_1_U44 (mul_32s_32s_32_2_1)</first>
+          <first>mul_32s_32s_32_2_1_U51 (mul_32s_32s_32_2_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4534,7 +4538,7 @@
           </second>
         </item>
         <item>
-          <first>mul_32s_32s_32_2_1_U44</first>
+          <first>mul_32s_32s_32_2_1_U51</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -4847,7 +4851,7 @@
           </second>
         </item>
         <item>
-          <first>mul_32s_32s_32_2_1_U44 (mul_32s_32s_32_2_1)</first>
+          <first>mul_32s_32s_32_2_1_U51 (mul_32s_32s_32_2_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

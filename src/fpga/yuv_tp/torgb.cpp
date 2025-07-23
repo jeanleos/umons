@@ -37,9 +37,9 @@ int torgb(int width, int height,
         g = (int) (100000 * y - 39465 * u - 58060 * v) / 100000;
         b = (int) (100000 * y + 203211 * u) / 100000;
 
-        r = max(min(r, 0), 255);
-        g = max(min(g, 0), 255);
-        b = max(min(b, 0), 255);
+        r = min(max(r, 0), 255);
+        g = min(max(g, 0), 255);
+        b = min(max(b, 0), 255);
 
         _y.data = r;
         _u.data = g;

@@ -9039,9 +9039,9 @@ __attribute__((sdx_kernel("torgb", 0))) int torgb(int width, int height,
         g = (int) (100000 * y - 39465 * u - 58060 * v) / 100000;
         b = (int) (100000 * y + 203211 * u) / 100000;
 
-        r = ({ __typeof__ (({ __typeof__ (r) _a = (r); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })) _a = (({ __typeof__ (r) _a = (r); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })); __typeof__ (255) _b = (255); _a > _b ? _a : _b; });
-        g = ({ __typeof__ (({ __typeof__ (g) _a = (g); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })) _a = (({ __typeof__ (g) _a = (g); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })); __typeof__ (255) _b = (255); _a > _b ? _a : _b; });
-        b = ({ __typeof__ (({ __typeof__ (b) _a = (b); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })) _a = (({ __typeof__ (b) _a = (b); __typeof__ (0) _b = (0); _a > _b ? _b : _a; })); __typeof__ (255) _b = (255); _a > _b ? _a : _b; });
+        r = ({ __typeof__ (({ __typeof__ (r) _a = (r); __typeof__ (0) _b = (0); _a > _b ? _a : _b; })) _a = (({ __typeof__ (r) _a = (r); __typeof__ (0) _b = (0); _a > _b ? _a : _b; })); __typeof__ (255) _b = (255); _a > _b ? _b : _a; });
+        g = ({ __typeof__ (({ __typeof__ (g) _a = (g); __typeof__ (0) _b = (0); _a > _b ? _a : _b; })) _a = (({ __typeof__ (g) _a = (g); __typeof__ (0) _b = (0); _a > _b ? _a : _b; })); __typeof__ (255) _b = (255); _a > _b ? _b : _a; });
+        b = ({ __typeof__ (({ __typeof__ (b) _a = (b); __typeof__ (0) _b = (0); _a > _b ? _a : _b; })) _a = (({ __typeof__ (b) _a = (b); __typeof__ (0) _b = (0); _a > _b ? _a : _b; })); __typeof__ (255) _b = (255); _a > _b ? _b : _a; });
 
         _y.data = r;
         _u.data = g;
